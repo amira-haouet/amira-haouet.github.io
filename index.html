@@ -8,38 +8,61 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0 20px;
-      background: linear-gradient(to right, #ffffff, #eaf4fc);
+      background: linear-gradient(to right, #fdfdfd, #e6f0ff);
       color: #333;
+      animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(20px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes glow {
+      0%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px #004080; }
+      50% { text-shadow: 0 0 20px #004080, 0 0 30px #004080; }
     }
 
     header {
       text-align: center;
-      padding: 40px 10px;
+      padding: 30px 0;
       background-color: #004080;
       color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-      animation: fadeIn 1.5s ease-in-out;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      animation: bounceIn 1.5s ease-out;
     }
 
     h1 {
-      font-size: 2.4em;
-      margin-bottom: 10px;
+      font-size: 2em;
+      animation: glow 3s ease-in-out infinite;
     }
 
     h2 {
       border-left: 4px solid #004080;
-      padding-left: 12px;
-      margin-top: 35px;
+      padding-left: 10px;
+      margin-top: 30px;
       color: #004080;
-      animation: slideInLeft 1s ease-in-out;
     }
 
     section {
-      margin-bottom: 30px;
-      opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s ease forwards;
-      animation-delay: 0.3s;
+      margin-bottom: 25px;
+      animation: slideUp 0.6s ease-out;
     }
 
     ul {
@@ -48,7 +71,8 @@
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+      animation: zoomIn 0.5s ease forwards;
     }
 
     a {
@@ -63,29 +87,9 @@
     footer {
       text-align: center;
       padding: 20px;
+      font-size: 0.9em;
       background-color: #f1f1f1;
       margin-top: 40px;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    .highlight {
-      color: #007acc;
-      font-weight: bold;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes slideInLeft {
-      from { transform: translateX(-30px); opacity: 0; }
-      to { transform: translateX(0); opacity: 1; }
     }
   </style>
 </head>
@@ -104,19 +108,9 @@
   <section>
     <h2>Compétences</h2>
     <ul>
-      <li><strong>Langages :</strong> C#, VB.NET, Python, Java, SQL</li>
+      <li><strong>Langages :</strong> C#, VB.NET, Python, Java, SQL, XML</li>
       <li><strong>Frameworks :</strong> Spring Boot, Angular</li>
       <li><strong>Web :</strong> HTML, CSS, JavaScript</li>
-      <li><strong>Outils :</strong> Git, Azure DevOps, JIRA, Terraform</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Projets</h2>
-    <ul>
-      <li>Développement d’une application RFID (LATELIERS, 2023)</li>
-      <li>Projet IA : Reconnaissance de l’écriture manuscrite (BFI Groupe, 2022)</li>
-      <li>Projet d’alternance : Prédiction d’absences avec données synthétiques (Holy-Dis)</li>
     </ul>
   </section>
 
@@ -125,25 +119,16 @@
     <ul>
       <li><strong>Apprentie Full Stack Engineer</strong> – Holy-Dis (2023–2026)</li>
       <li><strong>Stage Développeuse Full Stack</strong> – LATELIERS (2023)</li>
-      <li><strong>Stage IA</strong> – BFI Groupe (2022)</li>
-      <li><strong>Télé-enquêtrice</strong> – Médiamétrie (2022–2023)</li>
+      <li><strong>Stage</strong> – BFI Groupe (2022)</li>
     </ul>
   </section>
 
   <section>
     <h2>Formation</h2>
     <ul>
-      <li><strong>Diplôme d'ingénieur</strong> – Sorbonne Paris Nord (2023–2026)</li>
-      <li><strong>Licence Informatique</strong> – UPJV (2022–2023)</li>
+      <li><strong>Ingénierie Informatique</strong> – Sorbonne Paris Nord (2023–2026)</li>
+      <li><strong>Licence Informatique (L3)</strong> – UPJV (2022–2023)</li>
       <li><strong>Licence Informatique</strong> – ISET Nabeul (2020–2022)</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>Certifications</h2>
-    <ul>
-      <li>Pix – Compétences numériques (2022)</li>
-      <li>IBM SkillsBuild – Introduction à l’IA (2023)</li>
     </ul>
   </section>
 
@@ -152,7 +137,6 @@
     <ul>
       <li><strong>Email :</strong> <a href="mailto:haouetamira@gmail.com">haouetamira@gmail.com</a></li>
       <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/amira-haouet/" target="_blank">linkedin.com/in/amira-haouet</a></li>
-      <li><strong>GitHub :</strong> <a href="https://github.com/amira-haouet" target="_blank">github.com/amira-haouet</a></li>
     </ul>
   </section>
 
