@@ -4,6 +4,36 @@
   <meta charset="UTF-8">
   <title>Portfolio - Amira Haouet</title>
 <link rel="stylesheet" href="style.css">
+<script>
+  const getLang = () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('lang') || localStorage.getItem('lang') || navigator.language.slice(0, 2) || 'fr';
+  };
+
+  const applyTranslations = (translations, lang) => {
+    const t = translations[lang] || translations.fr;
+    document.documentElement.lang = lang;
+    document.getElementById("title").innerText = t.title;
+    document.getElementById("intro").innerText = t.intro;
+    document.getElementById("objective").innerText = t.objective;
+    document.getElementById("objective_content").innerText = t.objective_content;
+    document.getElementById("skills").innerText = t.skills;
+    document.getElementById("experience").innerText = t.experience;
+    document.getElementById("education").innerText = t.education;
+    document.getElementById("contact").innerText = t.contact;
+    document.getElementById("video").innerText = t.video;
+    document.getElementById("footer").innerText = t.footer;
+  };
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const lang = getLang();
+    localStorage.setItem('lang', lang);
+    fetch('lang.json')
+      .then(response => response.json())
+      .then(data => applyTranslations(data, lang))
+      .catch(error => console.error('Erreur de chargement JSON :', error));
+  });
+</script>
 
 </head>
 <body>
