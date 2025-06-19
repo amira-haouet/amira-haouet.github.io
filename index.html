@@ -3,53 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <title>Portfolio - Amira Haouet</title>
-<link rel="stylesheet" href="style.css">
-<script>
-  const getLang = () => {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('lang') || localStorage.getItem('lang') || navigator.language.slice(0, 2) || 'fr';
-  };
+  <link rel="stylesheet" href="style.css">
+  <style>
+   
+  </style>
+  <script>
+    const getLang = () => localStorage.getItem('lang') || navigator.language.slice(0, 2) || 'fr';
 
-  const applyTranslations = (translations, lang) => {
-    const t = translations[lang] || translations.fr;
-    document.documentElement.lang = lang;
-    document.getElementById("title").innerText = t.title;
-    document.getElementById("intro").innerText = t.intro;
-    document.getElementById("objective").innerText = t.objective;
-    document.getElementById("objective_content").innerText = t.objective_content;
-    document.getElementById("skills").innerText = t.skills;
-    document.getElementById("experience").innerText = t.experience;
-    document.getElementById("education").innerText = t.education;
-    document.getElementById("contact").innerText = t.contact;
-    document.getElementById("video").innerText = t.video;
-    document.getElementById("footer").innerText = t.footer;
-  };
+    const applyTranslations = (translations, lang) => {
+      const t = translations[lang] || translations.fr;
+      document.documentElement.lang = lang;
+      document.getElementById("title").innerText = t.title;
+      document.getElementById("intro").innerText = t.intro;
+      document.getElementById("objective").innerText = t.objective;
+      document.getElementById("objective_content").innerText = t.objective_content;
+      document.getElementById("skills").innerText = t.skills;
+      document.getElementById("experience").innerText = t.experience;
+      document.getElementById("education").innerText = t.education;
+      document.getElementById("contact").innerText = t.contact;
+      document.getElementById("video").innerText = t.video;
+      document.getElementById("footer").innerText = t.footer;
+    };
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const lang = getLang();
-    localStorage.setItem('lang', lang);
-    fetch('lang.json')
-      .then(response => response.json())
-      .then(data => applyTranslations(data, lang))
-      .catch(error => console.error('Erreur de chargement JSON :', error));
-  });
-</script>
+    const changeLanguage = (lang) => {
+      fetch('lang.json')
+        .then(response => response.json())
+        .then(data => {
+          localStorage.setItem('lang', lang);
+          applyTranslations(data, lang);
+        })
+        .catch(error => console.error('Erreur de chargement JSON :', error));
+    };
 
+    document.addEventListener("DOMContentLoaded", () => {
+      changeLanguage(getLang());
+    });
+  </script>
 </head>
 <body>
+  <div class="lang-buttons">
+    <button onclick="changeLanguage('fr')">FR</button>
+    <button onclick="changeLanguage('en')">EN</button>
+    <button onclick="changeLanguage('ar')">AR</button>
+  </div>
 
   <header>
-    <h1>Bienvenue sur le portfolio de Amira Haouet</h1>
-    <p>Étudiante en informatique passionnée par le développement logiciel et l'intelligence artificielle.</p>
+    <h1 id="title"></h1>
+    <p id="intro"></p>
   </header>
 
   <section>
-    <h2>Objectif Professionnel</h2>
-    <p>Actuellement en alternance chez Holy-Dis, je développe mes compétences en développement full stack et en intelligence artificielle. Ce portfolio présente mes projets, mon parcours et mes compétences dans le cadre de ma formation en ingénierie informatique.</p>
+    <h2 id="objective"></h2>
+    <p id="objective_content"></p>
   </section>
 
   <section>
-    <h2>Compétences</h2>
+    <h2 id="skills"></h2>
     <ul>
       <li><strong>Langages :</strong> C#, VB.NET, Python, Java, SQL, XML</li>
       <li><strong>Frameworks :</strong> Spring Boot, Angular</li>
@@ -58,7 +67,7 @@
   </section>
 
   <section>
-    <h2>Expériences</h2>
+    <h2 id="experience"></h2>
     <ul>
       <li><strong>Apprentie Full Stack Engineer</strong> – Holy-Dis (2023–2026)</li>
       <li><strong>Stage Développeuse Full Stack</strong> – LATELIERS (2023)</li>
@@ -67,7 +76,7 @@
   </section>
 
   <section>
-    <h2>Formation</h2>
+    <h2 id="education"></h2>
     <ul>
       <li><strong>Ingénierie Informatique</strong> – Sorbonne Paris Nord (2023–2026)</li>
       <li><strong>Licence Informatique (L3)</strong> – UPJV (2022–2023)</li>
@@ -76,16 +85,17 @@
   </section>
 
   <section>
-    <h2>Contact</h2>
+    <h2 id="contact"></h2>
     <ul>
       <li><strong>Email :</strong> <a href="mailto:haouetamira@gmail.com">haouetamira@gmail.com</a></li>
       <li><strong>LinkedIn :</strong> <a href="https://www.linkedin.com/in/amira-haouet/" target="_blank">linkedin.com/in/amira-haouet</a></li>
     </ul>
   </section>
 
-  <footer>
-    Voir en ligne : <a href="https://amira-haouet.github.io" target="_blank">amira-haouet.github.io</a>
-  </footer>
+  <section>
+    <h2 id="video"></h2>
+    <iframe width="560" height="315" src="" allowfullscreen></iframe>
+  </section>
 
-</body>
-</html>
+  <footer>
+    <span id="footer"></span> <a href="https://amira-haouet.github.io" target="_blank">amira-haouet.github.io

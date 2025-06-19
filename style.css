@@ -1,87 +1,153 @@
 body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0 20px;
-  background: linear-gradient(to right, #fdfdfd, #e6f0ff);
-  color: #333;
-  animation: fadeIn 1s ease-in;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0 20px;
+    background: linear-gradient(to right, #fdfdfd, #e6f0ff);
+    color: #333;
+    animation: fadeIn 1s ease-in;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 @keyframes zoomIn {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 @keyframes bounceIn {
-  0% { transform: scale(0.5); opacity: 0; }
-  60% { transform: scale(1.2); opacity: 1; }
-  100% { transform: scale(1); }
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 @keyframes glow {
-  0%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px #004080; }
-  50% { text-shadow: 0 0 20px #004080, 0 0 30px #004080; }
+
+    0%,
+    100% {
+        text-shadow: 0 0 10px #fff, 0 0 20px #004080;
+    }
+
+    50% {
+        text-shadow: 0 0 20px #004080, 0 0 30px #004080;
+    }
 }
 
 header {
-  text-align: center;
-  padding: 30px 0;
-  background-color: #004080;
-  color: white;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  animation: bounceIn 1.5s ease-out;
+    text-align: center;
+    padding: 30px 0;
+    background-color: #004080;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: bounceIn 1.5s ease-out;
 }
 
 h1 {
-  font-size: 2em;
-  animation: glow 3s ease-in-out infinite;
+    font-size: 2em;
+    animation: glow 3s ease-in-out infinite;
 }
 
 h2 {
-  border-left: 4px solid #004080;
-  padding-left: 10px;
-  margin-top: 30px;
-  color: #004080;
+    border-left: 4px solid #004080;
+    padding-left: 10px;
+    margin-top: 30px;
+    color: #004080;
 }
 
 section {
-  margin-bottom: 25px;
-  animation: slideUp 0.6s ease-out;
+    margin-bottom: 25px;
+    animation: slideUp 0.6s ease-out;
 }
 
 ul {
-  list-style-type: none;
-  padding-left: 0;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 li {
-  margin-bottom: 6px;
-  animation: zoomIn 0.5s ease forwards;
+    margin-bottom: 6px;
+    animation: zoomIn 0.5s ease forwards;
 }
 
 a {
-  color: #004080;
-  text-decoration: none;
+    color: #004080;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 0.9em;
-  background-color: #f1f1f1;
-  margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    background-color: #f1f1f1;
+    margin-top: 40px;
+}
+
+.lang-buttons {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 12px;
+    padding: 6px 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    z-index: 999;
+}
+
+.lang-buttons button {
+    background: #ffffff;
+    color: #004080;
+    border: 1px solid #004080;
+    padding: 6px 10px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.lang-buttons button:hover {
+    background: #004080;
+    color: white;
 }
