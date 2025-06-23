@@ -3,6 +3,11 @@ from lxml import etree
 
 app = Flask(__name__)
 app.secret_key = 'remplace_par_une_clef_secrète'
+from datetime import datetime
+
+@app.context_processor
+def inject_now():
+    return { 'now': datetime.now }
 
 # 1) Validation DTD + chargement XML
 dtd = etree.DTD('dtd/portfolio.dtd')

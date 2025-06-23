@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
+
+<head>
+  {% for l, href in alternates.items() %}
+    <link rel="alternate" href="{{ href }}" hreflang="{{ l }}" />
+  {% endfor %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titre et meta dynamiques -->
+  <title>{{ texts['personal_name'] }} – {{ texts['personal_title'] }}</title>
+  <meta name="description" content="{{ texts['meta_description'] }}">
+  <meta name="keywords"    content="{{ texts['meta_keywords'] }}">
+  <meta name="author"      content="{{ texts['personal_name'] }}">
+
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body>
+  <h1>
+    <?= texts['home_title'] ?>
+  </h1>
+
+  <!-- Splash et particules -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">{{ texts['loading_text'] }}</div>
+  </div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo" data-aos="fade-down">
+        <span>{{ texts['personal_name'] }}</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home"       class="nav-link">{{ texts['nav_home'] }}</a></li>
+        <li class="nav-item"><a href="#about"      class="nav-link">{{ texts['nav_about'] }}</a></li>
+        <li class="nav-item"><a href="#skills"     class="nav-link">{{ texts['nav_skills'] }}</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">{{ texts['nav_experience'] }}</a></li>
+        <li class="nav-item"><a href="#education"  class="nav-link">{{ texts['nav_education'] }}</a></li>
+        <li class="nav-item"><a href="#contact"    class="nav-link nav-cta">{{ texts['nav_contact'] }}</a></li>
+      </ul>
+      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+    </div>
+  </nav>
+
+  <!-- Section Home -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>{{ texts['personal_name'] }}</h1>
+        <div class="typewriter"><span class="typewriter-text"></span></div>
+        <p class="hero-description">{{ texts['personal_title'] }}</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">{{ texts['btn_contact'] }}</a>
+          <a href="{{ url_for('static', filename='assets/CvAmiraHAOUET_SP.pdf') }}"
+             download class="btn btn-secondary">{{ texts['btn_download'] }}</a>
+        </div>
+        <div class="social-links">
+          <a href="{{ texts['social_linkedin'] }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:{{ texts['personal_email'] }}"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <div class="image-wrapper">
+          <img src="{{ url_for('static', filename='assets/profile.jpg') }}" alt="{{ texts['personal_name'] }}">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section About -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['education_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_about'] }}</p>
+      </div>
+      <div class="about-content">
+        <p>{{ texts['education_sorbonne'] }}</p>
+        <p>{{ texts['education_upjv'] }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Skills -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['skills_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_skills'] }}</p>
+      </div>
+      <div class="skills-grid">
+        <p>{{ texts['skills_list'] }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Experience -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['experience_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_experience'] }}</p>
+      </div>
+      <ul class="experience-list">
+        <li>{{ texts['exp_holydis_ai'] }}</li>
+        <li>{{ texts['exp_holydis_fs'] }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Education -->
+  <section id="education" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['education_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_education'] }}</p>
+      </div>
+      <ul class="education-list">
+        <li>{{ texts['education_sorbonne'] }}</li>
+        <li>{{ texts['education_upjv'] }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section TPs de WS (exemple) -->
+  <section id="ws" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>{{ texts['tp_ws_title'] }}</h2>
+      <ul>
+        <li>{{ texts['tp_ws_dtd'] }}</li>
+        <li>{{ texts['tp_ws_xsd'] }}</li>
+        <li>{{ texts['tp_ws_xslt'] }}</li>
+        <li>{{ texts['tp_ws_rdf'] }}</li>
+        <li>{{ texts['tp_ws_rdfa'] }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Vidéo -->
+  <section id="video" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>{{ texts['video_title'] }}</h2>
+      <div class="video-wrapper">
+        {{ texts['video_iframe']|safe }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['nav_contact'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_contact'] }}</p>
+      </div>
+      <p><a href="mailto:{{ texts['personal_email'] }}">{{ texts['personal_email'] }}</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© {{ now().year }} {{ texts['personal_name'] }}. {{ texts['footer_rights'] }}</p>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Haut de page"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="{{ url_for('static', filename='js/portfolio.js') }}" defer></script>
+</body>
+</html>
