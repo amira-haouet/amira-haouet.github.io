@@ -6,7 +6,7 @@
   <block id="personal_name">
     <content lang="fr">Amira Haouet</content>
     <content lang="en">Amira Haouet</content>
-    <content lang="ar">أميرة </content>
+    <content lang="ar">  أميرة حوات</content>
   </block>
   <block id="personal_title">
     <content lang="fr">AI Software Engineer et Ingénieure Full-Stack</content>
@@ -172,5 +172,52 @@
   <content lang="en">Get in Touch</content>
   <content lang="ar">تواصل معنا</content>
 </block>
+<block id="footer_year">
+  <content lang="fr">2025</content>
+  <content lang="en">2025</content>
+  <content lang="ar">2025</content>
+</block>
+<block id="footer_rights">
+  <content lang="fr">Tous droits réservés.</content>
+  <content lang="en">All rights reserved.</content>
+  <content lang="ar">كل الحقوق محفوظة.</content>
+</block>
+  <!-- Meta SEO -->
+  <block id="meta_description">
+    <content lang="fr">Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l’IA, le web sémantique et la recherche.</content>
+    <content lang="en">Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer. Passionate about AI, semantic web and research.</content>
+    <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي في Holy-Dis، مطورة كاملة. شغوفة بالذكاء الاصطناعي والويب الدلالي والبحث.</content>
+  </block>
+  <block id="meta_keywords">
+    <content lang="fr">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>
+    <content lang="en">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>
+    <content lang="ar">أميرة حوات، ذكاء اصطناعي، تطوير كامل، بايثون، C#، جافاسكربت، محفظة</content>
+  </block>
+
+  <!-- Splash screen -->
+  <block id="loading_text">
+    <content lang="fr">Chargement du portfolio...</content>
+    <content lang="en">Loading portfolio...</content>
+    <content lang="ar">جارٍ تحميل المحفظة...</content>
+  </block>
+
+  <!-- Boutons -->
+  <block id="btn_contact">
+    <content lang="fr">Me contacter</content>
+    <content lang="en">Contact me</content>
+    <content lang="ar">تواصل معي</content>
+  </block>
+  <block id="btn_download">
+    <content lang="fr">Télécharger CV</content>
+    <content lang="en">Download CV</content>
+    <content lang="ar">تحميل السيرة الذاتية</content>
+  </block>
+
+  <!-- Réseaux sociaux -->
+  <block id="social_linkedin">
+    <content lang="fr">https://www.linkedin.com/in/amira-haouet/</content>
+    <content lang="en">https://www.linkedin.com/in/amira-haouet/</content>
+    <content lang="ar">https://www.linkedin.com/in/amira-haouet/</content>
+  </block>
 
 </portfolio>
