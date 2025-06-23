@@ -1,0 +1,9 @@
+<!ELEMENT portfolio (block+)>
+
+<!-- Un « block » correspond à une unité de contenu identifiée -->
+<!ELEMENT block (content+)>
+<!ATTLIST block id ID #REQUIRED  >
+
+<!-- Un « content » porte le texte dans une langue donnée -->
+<!ELEMENT content (#PCDATA)>
+<!ATTLIST content lang NMTOKEN #REQUIRED  >

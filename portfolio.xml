@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE portfolio SYSTEM "dtd/portfolio.dtd">
+<portfolio>
+
+  <!-- Informations personnelles -->
+  <block id="personal_name">
+    <content lang="fr">Amira Haouet</content>
+    <content lang="en">Amira Haouet</content>
+    <content lang="ar">أميرة </content>
+  </block>
+  <block id="personal_title">
+    <content lang="fr">AI Software Engineer et Ingénieure Full-Stack</content>
+    <content lang="en">AI Software Engineer et Full-Stack Developer</content>
+    <content lang="ar">مهندسة برمجيات ذكاء اصطناعي ومطورة كاملة</content>
+  </block>
+  <block id="personal_email">
+    <content lang="fr">haouetamira@gmail.com</content>
+    <content lang="en">haouetamira@gmail.com</content>
+    <content lang="ar">haouetamira@gmail.com</content>
+  </block>
+
+  <!-- Formation -->
+  <block id="education_title">
+    <content lang="fr">Formation</content>
+    <content lang="en">Education</content>
+    <content lang="ar">التعليم</content>
+  </block>
+  <block id="education_sorbonne">
+    <content lang="fr">Ingénierie Informatique – Sorbonne Paris Nord (2023–2026)</content>
+    <content lang="en">Computer Engineering – Sorbonne Paris Nord (2023–2026)</content>
+    <content lang="ar">هندسة الحاسوب – سوربون باريس نورد (2023–2026)</content>
+  </block>
+  <block id="education_upjv">
+    <content lang="fr">Licence Informatique – UPJV (2022–2023)</content>
+    <content lang="en">B.Sc. Computer Science – UPJV (2022–2023)</content>
+    <content lang="ar">بكالوريوس علوم الحاسوب – UPJV (2022–2023)</content>
+  </block>
+
+  <!-- Compétences -->
+  <block id="skills_title">
+    <content lang="fr">Compétences Techniques</content>
+    <content lang="en">Technical Skills</content>
+    <content lang="ar">المهارات التقنية</content>
+  </block>
+  <block id="skills_list">
+    <content lang="fr">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
+    <content lang="en">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
+    <content lang="ar">بايثون، C#، جافا، SQL، XML، RDF، SPARQL</content>
+  </block>
+
+  <!-- Expérience professionnelle -->
+  <block id="experience_title">
+    <content lang="fr">Expérience</content>
+    <content lang="en">Experience</content>
+    <content lang="ar">الخبرة</content>
+  </block>
+  <block id="exp_holydis_ai">
+    <content lang="fr">AI Software Engineer – Holy-Dis (juil. 2024 – aujourd’hui)</content>
+    <content lang="en">AI Software Engineer – Holy-Dis (Jul 2024 – present)</content>
+    <content lang="ar">مهندسة برمجيات ذكاء اصطناعي – Holy-Dis (يوليو 2024 – الآن)</content>
+  </block>
+  <block id="exp_holydis_fs">
+    <content lang="fr">Ingénieure Full-Stack – Holy-Dis (sept. 2023 – aujourd’hui)</content>
+    <content lang="en">Full-Stack Developer – Holy-Dis (Sep 2023 – present)</content>
+    <content lang="ar">مطورة كاملة – Holy-Dis (سبتمبر 2023 – الآن)</content>
+  </block>
+
+  <!-- TPs de Web Sémantique -->
+  <block id="tp_ws_title">
+    <content lang="fr">TPs Web Sémantique</content>
+    <content lang="en">Semantic Web Labs</content>
+    <content lang="ar">تمارين الويب الدلالي</content>
+  </block>
+  <block id="tp_ws_dtd">
+    <content lang="fr">Définition d’une DTD pour contenu multilingue (XML + DTD)</content>
+    <content lang="en">Definition of a DTD for multilingual content (XML + DTD)</content>
+    <content lang="ar">تعريف DTD للمحتوى متعدد اللغات (XML + DTD)</content>
+  </block>
+  <block id="tp_ws_xsd">
+    <content lang="fr">Validation avec un schéma XSD personnalisé</content>
+    <content lang="en">Validation using a custom XSD schema</content>
+    <content lang="ar">التحقق باستخدام مخطط XSD مخصص</content>
+  </block>
+  <block id="tp_ws_xslt">
+    <content lang="fr">Transformation XML en HTML5 avec XSLT</content>
+    <content lang="en">XML en HTML5 transformation using XSLT</content>
+    <content lang="ar">تحويل XML إلى HTML5 بواسطة XSLT</content>
+  </block>
+  <block id="tp_ws_rdf">
+    <content lang="fr">Modélisation RDF / RDFS pour enrichir les métadonnées</content>
+    <content lang="en">RDF / RDFS modeling to enrich metadata</content>
+    <content lang="ar">نمذجة RDF / RDFS لإثراء البيانات الوصفية</content>
+  </block>
+  <block id="tp_ws_rdfa">
+    <content lang="fr">Annotation RDFa sur le HTML pour SEO et accessibilité</content>
+    <content lang="en">RDFa annotation on HTML for SEO and accessibility</content>
+    <content lang="ar">تعليق RDFa على HTML لتحسين محركات البحث والوصول</content>
+  </block>
+
+  <!-- Vidéo multilingue -->
+  <block id="video_title">
+    <content lang="fr">Présentation Vidéo</content>
+    <content lang="en">Video Presentation</content>
+    <content lang="ar">عرض فيديو</content>
+  </block>
+  <block id="video_iframe">
+    <content lang="fr">
+     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen&gt;&lt;/iframe&gt;
+    </content>
+    <content lang="en">
+     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira’s Presentation" allowfullscreen&gt;&lt;/iframe&gt;
+    </content>
+    <content lang="ar">
+     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=ar" title="عرض أميرة" allowfullscreen&gt;&lt;/iframe&gt;
+    </content>
+  </block>
+<!-- Menu de navigation -->
+<block id="nav_home">
+  <content lang="fr">Accueil</content>
+  <content lang="en">Home</content>
+  <content lang="ar">الرئيسية</content>
+</block>
+<block id="nav_about">
+  <content lang="fr">À propos</content>
+  <content lang="en">About</content>
+  <content lang="ar">حول</content>
+</block>
+<block id="nav_skills">
+  <content lang="fr">Compétences</content>
+  <content lang="en">Skills</content>
+  <content lang="ar">مهارات</content>
+</block>
+<block id="nav_experience">
+  <content lang="fr">Expérience</content>
+  <content lang="en">Experience</content>
+  <content lang="ar">الخبرة</content>
+</block>
+<block id="nav_education">
+  <content lang="fr">Formation</content>
+  <content lang="en">Education</content>
+  <content lang="ar">التعليم</content>
+</block>
+<block id="nav_contact">
+  <content lang="fr">Contact</content>
+  <content lang="en">Contact</content>
+  <content lang="ar">اتصل</content>
+</block>
+
+<!-- Section subtitles -->
+<block id="subtitle_about">
+  <content lang="fr">Ingénieure Informatiqueet AI Enthusiast</content>
+  <content lang="en">Computer Engineeret AI Enthusiast</content>
+  <content lang="ar">مهندسة حاسوب وعاشقة الذكاء الاصطناعي</content>
+</block>
+<block id="subtitle_skills">
+  <content lang="fr">Techniqueset Outils</content>
+  <content lang="en">Toolset Technologies</content>
+  <content lang="ar">الأدوات والتقنيات</content>
+</block>
+<block id="subtitle_experience">
+  <content lang="fr">Parcours professionnel</content>
+  <content lang="en">Professional Journey</content>
+  <content lang="ar">المسار المهني</content>
+</block>
+<block id="subtitle_education">
+  <content lang="fr">Parcours académique</content>
+  <content lang="en">Academic Background</content>
+  <content lang="ar">الخلفية الأكاديمية</content>
+</block>
+<block id="subtitle_contact">
+  <content lang="fr">Entrons en contact</content>
+  <content lang="en">Get in Touch</content>
+  <content lang="ar">تواصل معنا</content>
+</block>
+
+</portfolio>
