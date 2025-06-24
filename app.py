@@ -111,7 +111,7 @@ if __name__ == '__main__':
     test_missing_translations()
 
     # Optionnel : Générer les pages statiques si demandé
-    # generate_static_pages()
+    generate_static_pages()
 
     # Lancer le serveur Flask pour test local
     app.run(debug=True)
