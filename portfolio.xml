@@ -6,7 +6,7 @@
   <block id="personal_name">
     <content lang="fr">Amira Haouet</content>
     <content lang="en">Amira Haouet</content>
-    <content lang="ar">  أميرة حوات</content>
+    <content lang="ar"> أميرة حوات</content>
   </block>
   <block id="personal_title">
     <content lang="fr">AI Software Engineer et Ingénieure Full-Stack</content>
@@ -98,95 +98,94 @@
   </block>
 
   <!-- Vidéo multilingue -->
-  <block id="video_title">
-    <content lang="fr">Présentation Vidéo</content>
-    <content lang="en">Video Presentation</content>
-    <content lang="ar">عرض فيديو</content>
-  </block>
   <block id="video_iframe">
-    <content lang="fr">
-     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen&gt;&lt;/iframe&gt;
-    </content>
-    <content lang="en">
-     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira’s Presentation" allowfullscreen&gt;&lt;/iframe&gt;
-    </content>
-    <content lang="ar">
-     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=ar" title="عرض أميرة" allowfullscreen&gt;&lt;/iframe&gt;
-    </content>
+    <content lang="fr"><![CDATA[
+    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen></iframe>
+  ]]></content>
+    <content lang="en"><![CDATA[
+    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira’s Presentation" allowfullscreen></iframe>
+  ]]></content>
+    <content lang="ar"><![CDATA[
+    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=ar" title="عرض أميرة" allowfullscreen></iframe>
+  ]]></content>
   </block>
-<!-- Menu de navigation -->
-<block id="nav_home">
-  <content lang="fr">Accueil</content>
-  <content lang="en">Home</content>
-  <content lang="ar">الرئيسية</content>
-</block>
-<block id="nav_about">
-  <content lang="fr">À propos</content>
-  <content lang="en">About</content>
-  <content lang="ar">حول</content>
-</block>
-<block id="nav_skills">
-  <content lang="fr">Compétences</content>
-  <content lang="en">Skills</content>
-  <content lang="ar">مهارات</content>
-</block>
-<block id="nav_experience">
-  <content lang="fr">Expérience</content>
-  <content lang="en">Experience</content>
-  <content lang="ar">الخبرة</content>
-</block>
-<block id="nav_education">
-  <content lang="fr">Formation</content>
-  <content lang="en">Education</content>
-  <content lang="ar">التعليم</content>
-</block>
-<block id="nav_contact">
-  <content lang="fr">Contact</content>
-  <content lang="en">Contact</content>
-  <content lang="ar">اتصل</content>
-</block>
 
-<!-- Section subtitles -->
-<block id="subtitle_about">
-  <content lang="fr">Ingénieure Informatiqueet AI Enthusiast</content>
-  <content lang="en">Computer Engineeret AI Enthusiast</content>
-  <content lang="ar">مهندسة حاسوب وعاشقة الذكاء الاصطناعي</content>
-</block>
-<block id="subtitle_skills">
-  <content lang="fr">Techniqueset Outils</content>
-  <content lang="en">Toolset Technologies</content>
-  <content lang="ar">الأدوات والتقنيات</content>
-</block>
-<block id="subtitle_experience">
-  <content lang="fr">Parcours professionnel</content>
-  <content lang="en">Professional Journey</content>
-  <content lang="ar">المسار المهني</content>
-</block>
-<block id="subtitle_education">
-  <content lang="fr">Parcours académique</content>
-  <content lang="en">Academic Background</content>
-  <content lang="ar">الخلفية الأكاديمية</content>
-</block>
-<block id="subtitle_contact">
-  <content lang="fr">Entrons en contact</content>
-  <content lang="en">Get in Touch</content>
-  <content lang="ar">تواصل معنا</content>
-</block>
-<block id="footer_year">
-  <content lang="fr">2025</content>
-  <content lang="en">2025</content>
-  <content lang="ar">2025</content>
-</block>
-<block id="footer_rights">
-  <content lang="fr">Tous droits réservés.</content>
-  <content lang="en">All rights reserved.</content>
-  <content lang="ar">كل الحقوق محفوظة.</content>
-</block>
+  <!-- Menu de navigation -->
+  <block id="nav_home">
+    <content lang="fr">Accueil</content>
+    <content lang="en">Home</content>
+    <content lang="ar">الرئيسية</content>
+  </block>
+  <block id="nav_about">
+    <content lang="fr">À propos</content>
+    <content lang="en">About</content>
+    <content lang="ar">حول</content>
+  </block>
+  <block id="nav_skills">
+    <content lang="fr">Compétences</content>
+    <content lang="en">Skills</content>
+    <content lang="ar">مهارات</content>
+  </block>
+  <block id="nav_experience">
+    <content lang="fr">Expérience</content>
+    <content lang="en">Experience</content>
+    <content lang="ar">الخبرة</content>
+  </block>
+  <block id="nav_education">
+    <content lang="fr">Formation</content>
+    <content lang="en">Education</content>
+    <content lang="ar">التعليم</content>
+  </block>
+  <block id="nav_contact">
+    <content lang="fr">Contact</content>
+    <content lang="en">Contact</content>
+    <content lang="ar">اتصل</content>
+  </block>
+
+  <!-- Section subtitles -->
+  <block id="subtitle_about">
+    <content lang="fr">Ingénieure Informatiqueet AI Enthusiast</content>
+    <content lang="en">Computer Engineeret AI Enthusiast</content>
+    <content lang="ar">مهندسة حاسوب وعاشقة الذكاء الاصطناعي</content>
+  </block>
+  <block id="subtitle_skills">
+    <content lang="fr">Techniqueset Outils</content>
+    <content lang="en">Toolset Technologies</content>
+    <content lang="ar">الأدوات والتقنيات</content>
+  </block>
+  <block id="subtitle_experience">
+    <content lang="fr">Parcours professionnel</content>
+    <content lang="en">Professional Journey</content>
+    <content lang="ar">المسار المهني</content>
+  </block>
+  <block id="subtitle_education">
+    <content lang="fr">Parcours académique</content>
+    <content lang="en">Academic Background</content>
+    <content lang="ar">الخلفية الأكاديمية</content>
+  </block>
+  <block id="subtitle_contact">
+    <content lang="fr">Entrons en contact</content>
+    <content lang="en">Get in Touch</content>
+    <content lang="ar">تواصل معنا</content>
+  </block>
+  <block id="footer_year">
+    <content lang="fr">2025</content>
+    <content lang="en">2025</content>
+    <content lang="ar">2025</content>
+  </block>
+  <block id="footer_rights">
+    <content lang="fr">Tous droits réservés.</content>
+    <content lang="en">All rights reserved.</content>
+    <content lang="ar">كل الحقوق محفوظة.</content>
+  </block>
   <!-- Meta SEO -->
   <block id="meta_description">
-    <content lang="fr">Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l’IA, le web sémantique et la recherche.</content>
-    <content lang="en">Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer. Passionate about AI, semantic web and research.</content>
-    <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي في Holy-Dis، مطورة كاملة. شغوفة بالذكاء الاصطناعي والويب الدلالي والبحث.</content>
+    <content lang="fr">Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack.
+      Passionnée par l’IA, le web sémantique et la recherche.</content>
+    <content lang="en">Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer.
+      Passionate about AI, semantic web and research.</content>
+    <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي في Holy-Dis، مطورة كاملة. شغوفة
+      بالذكاء الاصطناعي والويب الدلالي والبحث.</content>
   </block>
   <block id="meta_keywords">
     <content lang="fr">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>

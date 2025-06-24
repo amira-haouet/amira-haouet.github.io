@@ -1,223 +1,200 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE portfolio SYSTEM "dtd/portfolio.dtd">
-<portfolio>
+<!DOCTYPE html>
+<html lang="{{ current_lang }}">
 
-  <!-- Informations personnelles -->
-  <block id="personal_name">
-    <content lang="fr">Amira Haouet</content>
-    <content lang="en">Amira Haouet</content>
-    <content lang="ar">  أميرة حوات</content>
-  </block>
-  <block id="personal_title">
-    <content lang="fr">AI Software Engineer et Ingénieure Full-Stack</content>
-    <content lang="en">AI Software Engineer et Full-Stack Developer</content>
-    <content lang="ar">مهندسة برمجيات ذكاء اصطناعي ومطورة كاملة</content>
-  </block>
-  <block id="personal_email">
-    <content lang="fr">haouetamira@gmail.com</content>
-    <content lang="en">haouetamira@gmail.com</content>
-    <content lang="ar">haouetamira@gmail.com</content>
-  </block>
+<head>
+  {% for l, href in alternates.items() %}
+  <link rel="alternate" href="{{ href }}" hreflang="{{ l }}" />
+  {% endfor %}
+  <meta charset="UTF-8">
+  <!-- Métadonnées RDFa Dublin Core -->
+  <meta property="dc:creator" content="{{ texts['personal_name'] }}">
+  <meta property="dc:language" content="{{ current_lang }}">
+  <meta property="dc:title" content="{{ texts['personal_title'] }}">
 
-  <!-- Formation -->
-  <block id="education_title">
-    <content lang="fr">Formation</content>
-    <content lang="en">Education</content>
-    <content lang="ar">التعليم</content>
-  </block>
-  <block id="education_sorbonne">
-    <content lang="fr">Ingénierie Informatique – Sorbonne Paris Nord (2023–2026)</content>
-    <content lang="en">Computer Engineering – Sorbonne Paris Nord (2023–2026)</content>
-    <content lang="ar">هندسة الحاسوب – سوربون باريس نورد (2023–2026)</content>
-  </block>
-  <block id="education_upjv">
-    <content lang="fr">Licence Informatique – UPJV (2022–2023)</content>
-    <content lang="en">B.Sc. Computer Science – UPJV (2022–2023)</content>
-    <content lang="ar">بكالوريوس علوم الحاسوب – UPJV (2022–2023)</content>
-  </block>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Compétences -->
-  <block id="skills_title">
-    <content lang="fr">Compétences Techniques</content>
-    <content lang="en">Technical Skills</content>
-    <content lang="ar">المهارات التقنية</content>
-  </block>
-  <block id="skills_list">
-    <content lang="fr">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
-    <content lang="en">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
-    <content lang="ar">بايثون، C#، جافا، SQL، XML، RDF، SPARQL</content>
-  </block>
+  <!-- Titre et meta dynamiques -->
+  <title>{{ texts['personal_name'] }} – {{ texts['personal_title'] }}</title>
+  <meta name="description" content="{{ texts['meta_description'] }}">
+  <meta name="keywords" content="{{ texts['meta_keywords'] }}">
+  <meta name="author" content="{{ texts['personal_name'] }}">
+  <link rel="author" href="{{ texts['social_linkedin'] }}">
 
-  <!-- Expérience professionnelle -->
-  <block id="experience_title">
-    <content lang="fr">Expérience</content>
-    <content lang="en">Experience</content>
-    <content lang="ar">الخبرة</content>
-  </block>
-  <block id="exp_holydis_ai">
-    <content lang="fr">AI Software Engineer – Holy-Dis (juil. 2024 – aujourd’hui)</content>
-    <content lang="en">AI Software Engineer – Holy-Dis (Jul 2024 – present)</content>
-    <content lang="ar">مهندسة برمجيات ذكاء اصطناعي – Holy-Dis (يوليو 2024 – الآن)</content>
-  </block>
-  <block id="exp_holydis_fs">
-    <content lang="fr">Ingénieure Full-Stack – Holy-Dis (sept. 2023 – aujourd’hui)</content>
-    <content lang="en">Full-Stack Developer – Holy-Dis (Sep 2023 – present)</content>
-    <content lang="ar">مطورة كاملة – Holy-Dis (سبتمبر 2023 – الآن)</content>
-  </block>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
 
-  <!-- TPs de Web Sémantique -->
-  <block id="tp_ws_title">
-    <content lang="fr">TPs Web Sémantique</content>
-    <content lang="en">Semantic Web Labs</content>
-    <content lang="ar">تمارين الويب الدلالي</content>
-  </block>
-  <block id="tp_ws_dtd">
-    <content lang="fr">Définition d’une DTD pour contenu multilingue (XML + DTD)</content>
-    <content lang="en">Definition of a DTD for multilingual content (XML + DTD)</content>
-    <content lang="ar">تعريف DTD للمحتوى متعدد اللغات (XML + DTD)</content>
-  </block>
-  <block id="tp_ws_xsd">
-    <content lang="fr">Validation avec un schéma XSD personnalisé</content>
-    <content lang="en">Validation using a custom XSD schema</content>
-    <content lang="ar">التحقق باستخدام مخطط XSD مخصص</content>
-  </block>
-  <block id="tp_ws_xslt">
-    <content lang="fr">Transformation XML en HTML5 avec XSLT</content>
-    <content lang="en">XML en HTML5 transformation using XSLT</content>
-    <content lang="ar">تحويل XML إلى HTML5 بواسطة XSLT</content>
-  </block>
-  <block id="tp_ws_rdf">
-    <content lang="fr">Modélisation RDF / RDFS pour enrichir les métadonnées</content>
-    <content lang="en">RDF / RDFS modeling to enrich metadata</content>
-    <content lang="ar">نمذجة RDF / RDFS لإثراء البيانات الوصفية</content>
-  </block>
-  <block id="tp_ws_rdfa">
-    <content lang="fr">Annotation RDFa sur le HTML pour SEO et accessibilité</content>
-    <content lang="en">RDFa annotation on HTML for SEO and accessibility</content>
-    <content lang="ar">تعليق RDFa على HTML لتحسين محركات البحث والوصول</content>
-  </block>
+<body lang="{{ current_lang }}" {% if current_lang=='ar' %}dir="rtl" {% endif %}>
 
-  <!-- Vidéo multilingue -->
-  <block id="video_title">
-    <content lang="fr">Présentation Vidéo</content>
-    <content lang="en">Video Presentation</content>
-    <content lang="ar">عرض فيديو</content>
-  </block>
-  <block id="video_iframe">
-    <content lang="fr">
-     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen&gt;&lt;/iframe&gt;
-    </content>
-    <content lang="en">
-     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira’s Presentation" allowfullscreen&gt;&lt;/iframe&gt;
-    </content>
-    <content lang="ar">
-     etlt;iframe src="https://www.youtube.com/embed/TALE_ID?hl=ar" title="عرض أميرة" allowfullscreen&gt;&lt;/iframe&gt;
-    </content>
-  </block>
-<!-- Menu de navigation -->
-<block id="nav_home">
-  <content lang="fr">Accueil</content>
-  <content lang="en">Home</content>
-  <content lang="ar">الرئيسية</content>
-</block>
-<block id="nav_about">
-  <content lang="fr">À propos</content>
-  <content lang="en">About</content>
-  <content lang="ar">حول</content>
-</block>
-<block id="nav_skills">
-  <content lang="fr">Compétences</content>
-  <content lang="en">Skills</content>
-  <content lang="ar">مهارات</content>
-</block>
-<block id="nav_experience">
-  <content lang="fr">Expérience</content>
-  <content lang="en">Experience</content>
-  <content lang="ar">الخبرة</content>
-</block>
-<block id="nav_education">
-  <content lang="fr">Formation</content>
-  <content lang="en">Education</content>
-  <content lang="ar">التعليم</content>
-</block>
-<block id="nav_contact">
-  <content lang="fr">Contact</content>
-  <content lang="en">Contact</content>
-  <content lang="ar">اتصل</content>
-</block>
+  <!-- Splash et particules -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">{{ texts['loading_text'] }}</div>
+  </div>
+  <div class="particles" id="particles"></div>
 
-<!-- Section subtitles -->
-<block id="subtitle_about">
-  <content lang="fr">Ingénieure Informatiqueet AI Enthusiast</content>
-  <content lang="en">Computer Engineeret AI Enthusiast</content>
-  <content lang="ar">مهندسة حاسوب وعاشقة الذكاء الاصطناعي</content>
-</block>
-<block id="subtitle_skills">
-  <content lang="fr">Techniqueset Outils</content>
-  <content lang="en">Toolset Technologies</content>
-  <content lang="ar">الأدوات والتقنيات</content>
-</block>
-<block id="subtitle_experience">
-  <content lang="fr">Parcours professionnel</content>
-  <content lang="en">Professional Journey</content>
-  <content lang="ar">المسار المهني</content>
-</block>
-<block id="subtitle_education">
-  <content lang="fr">Parcours académique</content>
-  <content lang="en">Academic Background</content>
-  <content lang="ar">الخلفية الأكاديمية</content>
-</block>
-<block id="subtitle_contact">
-  <content lang="fr">Entrons en contact</content>
-  <content lang="en">Get in Touch</content>
-  <content lang="ar">تواصل معنا</content>
-</block>
-<block id="footer_year">
-  <content lang="fr">2025</content>
-  <content lang="en">2025</content>
-  <content lang="ar">2025</content>
-</block>
-<block id="footer_rights">
-  <content lang="fr">Tous droits réservés.</content>
-  <content lang="en">All rights reserved.</content>
-  <content lang="ar">كل الحقوق محفوظة.</content>
-</block>
-  <!-- Meta SEO -->
-  <block id="meta_description">
-    <content lang="fr">Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l’IA, le web sémantique et la recherche.</content>
-    <content lang="en">Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer. Passionate about AI, semantic web and research.</content>
-    <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي في Holy-Dis، مطورة كاملة. شغوفة بالذكاء الاصطناعي والويب الدلالي والبحث.</content>
-  </block>
-  <block id="meta_keywords">
-    <content lang="fr">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>
-    <content lang="en">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>
-    <content lang="ar">أميرة حوات، ذكاء اصطناعي، تطوير كامل، بايثون، C#، جافاسكربت، محفظة</content>
-  </block>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo" data-aos="fade-down">
+        <span>{{ texts['personal_name'] }}</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link">{{ texts['nav_home'] }}</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">{{ texts['nav_about'] }}</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">{{ texts['nav_skills'] }}</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">{{ texts['nav_experience'] }}</a></li>
+        <li class="nav-item"><a href="#education" class="nav-link">{{ texts['nav_education'] }}</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link nav-cta">{{ texts['nav_contact'] }}</a></li>
+      </ul>
+      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+    </div>
+  </nav>
 
-  <!-- Splash screen -->
-  <block id="loading_text">
-    <content lang="fr">Chargement du portfolio...</content>
-    <content lang="en">Loading portfolio...</content>
-    <content lang="ar">جارٍ تحميل المحفظة...</content>
-  </block>
+  <!-- Section Home -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>{{ texts['personal_name'] }}</h1>
+        <div class="typewriter"><span class="typewriter-text"></span></div>
+        <p class="hero-description">{{ texts['personal_title'] }}</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">{{ texts['btn_contact'] }}</a>
+          <a href="{{ url_for('static', filename='assets/CvAmiraHAOUET_SP.pdf') }}" download
+            class="btn btn-secondary">{{ texts['btn_download'] }}</a>
+        </div>
 
-  <!-- Boutons -->
-  <block id="btn_contact">
-    <content lang="fr">Me contacter</content>
-    <content lang="en">Contact me</content>
-    <content lang="ar">تواصل معي</content>
-  </block>
-  <block id="btn_download">
-    <content lang="fr">Télécharger CV</content>
-    <content lang="en">Download CV</content>
-    <content lang="ar">تحميل السيرة الذاتية</content>
-  </block>
+        <!-- RDFa schema.org pour l'indexation sémantique -->
+        <div vocab="https://schema.org/" typeof="Person">
+          <span property="name">{{ texts['personal_name'] }}</span><br>
+          <span property="jobTitle">{{ texts['personal_title'] }}</span><br>
+          <a href="mailto:{{ texts['personal_email'] }}" property="email">{{ texts['personal_email'] }}</a>
+        </div>
+        <!-- FOAF RDFa complémentaire -->
+        <div vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
+          <span property="foaf:name">{{ texts['personal_name'] }}</span><br>
+          <span property="foaf:title">{{ texts['personal_title'] }}</span><br>
+          <a href="mailto:{{ texts['personal_email'] }}" property="foaf:mbox">{{ texts['personal_email'] }}</a>
+        </div>
 
-  <!-- Réseaux sociaux -->
-  <block id="social_linkedin">
-    <content lang="fr">https://www.linkedin.com/in/amira-haouet/</content>
-    <content lang="en">https://www.linkedin.com/in/amira-haouet/</content>
-    <content lang="ar">https://www.linkedin.com/in/amira-haouet/</content>
-  </block>
+        <div class="social-links">
+          <a href="{{ texts['social_linkedin'] }}" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:{{ texts['personal_email'] }}"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <div class="image-wrapper">
+          <img src="{{ url_for('static', filename='assets/profile.jpg') }}" alt="{{ texts['personal_name'] }}">
+        </div>
+      </div>
+    </div>
+  </section>
 
-</portfolio>
+
+  <!-- Section About -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['education_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_about'] }}</p>
+      </div>
+      <div class="about-content">
+        <p>{{ texts['education_sorbonne'] }}</p>
+        <p>{{ texts['education_upjv'] }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Skills -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['skills_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_skills'] }}</p>
+      </div>
+      <div class="skills-grid">
+        <p>{{ texts['skills_list'] }}</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Experience -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['experience_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_experience'] }}</p>
+      </div>
+      <ul class="experience-list">
+        <li>{{ texts['exp_holydis_ai'] }}</li>
+        <li>{{ texts['exp_holydis_fs'] }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Education -->
+  <section id="education" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['education_title'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_education'] }}</p>
+      </div>
+      <ul class="education-list">
+        <li>{{ texts['education_sorbonne'] }}</li>
+        <li>{{ texts['education_upjv'] }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section TPs de WS (exemple) -->
+  <section id="ws" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>{{ texts['tp_ws_title'] }}</h2>
+      <ul>
+        <li>{{ texts['tp_ws_dtd'] }}</li>
+        <li>{{ texts['tp_ws_xsd'] }}</li>
+        <li>{{ texts['tp_ws_xslt'] }}</li>
+        <li>{{ texts['tp_ws_rdf'] }}</li>
+        <li>{{ texts['tp_ws_rdfa'] }}</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Vidéo -->
+  <section id="video" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>{{ texts['video_title'] }}</h2>
+      <div class="video-wrapper">
+        {{ texts['video_iframe']|safe }}
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>{{ texts['nav_contact'] }}</h2>
+        <p class="section-subtitle">{{ texts['subtitle_contact'] }}</p>
+      </div>
+      <p><a href="mailto:{{ texts['personal_email'] }}">{{ texts['personal_email'] }}</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© {{ now().year }} {{ texts['personal_name'] }}. {{ texts['footer_rights'] }}</p>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Haut de page"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="{{ url_for('static', filename='js/portfolio.js') }}" defer></script>
+</body>
+
+</html>
