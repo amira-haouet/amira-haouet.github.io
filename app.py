@@ -83,7 +83,7 @@ def generate_static_pages(output_dir="static_site"):
             )
             filename = f"{lang}.html" if lang != "fr" else "index.html"
             output_path = os.path.join(output_dir, filename)
-            with open(output_path, "w", encoding="utf-8") as f:
+            with open(output_path, "w", encoding="UTF-16") as f:
                 f.write(html)
             print(f"✅ {filename} généré.")
 
