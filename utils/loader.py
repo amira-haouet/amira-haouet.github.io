@@ -1,6 +1,6 @@
 from lxml import etree
 
-def get_texts(lang='fr', xml_path='data/content.xml'):
+def get_texts(lang='fr', xml_path='data/portfolio.xml'):
     tree = etree.parse(xml_path)
     data = {}
     for block in tree.xpath("//block"):

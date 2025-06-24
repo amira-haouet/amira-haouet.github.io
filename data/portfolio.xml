@@ -7,17 +7,20 @@
   <block id="personal_name">
     <content lang="fr">Amira Haouet</content>
     <content lang="en">Amira Haouet</content>
-    <content lang="ar"> أميرة حوات</content>
+    <content lang="ar">أميرة حوات</content>
+    <content lang="ja">アミラ・ハウエット</content>
   </block>
   <block id="personal_title">
     <content lang="fr">AI Software Engineer et Ingénieure Full-Stack</content>
     <content lang="en">AI Software Engineer et Full-Stack Developer</content>
     <content lang="ar">مهندسة برمجيات ذكاء اصطناعي ومطورة كاملة</content>
+    <content lang="ja">AIソフトウェアエンジニアおよびフルスタック開発者</content>
   </block>
   <block id="personal_email">
     <content lang="fr">haouetamira@gmail.com</content>
     <content lang="en">haouetamira@gmail.com</content>
     <content lang="ar">haouetamira@gmail.com</content>
+    <content lang="ja">haouetamira@gmail.com</content>
   </block>
 
   <!-- Formation -->
@@ -25,16 +28,19 @@
     <content lang="fr">Formation</content>
     <content lang="en">Education</content>
     <content lang="ar">التعليم</content>
+    <content lang="ja">学歴</content>
   </block>
   <block id="education_sorbonne">
     <content lang="fr">Ingénierie Informatique – Sorbonne Paris Nord (2023–2026)</content>
     <content lang="en">Computer Engineering – Sorbonne Paris Nord (2023–2026)</content>
     <content lang="ar">هندسة الحاسوب – سوربون باريس نورد (2023–2026)</content>
+    <content lang="ja">コンピューター工学 – ソルボンヌ・パリ・ノール（2023–2026）</content>
   </block>
   <block id="education_upjv">
     <content lang="fr">Licence Informatique – UPJV (2022–2023)</content>
     <content lang="en">B.Sc. Computer Science – UPJV (2022–2023)</content>
     <content lang="ar">بكالوريوس علوم الحاسوب – UPJV (2022–2023)</content>
+    <content lang="ja">情報学学士 – UPJV（2022–2023）</content>
   </block>
 
   <!-- Compétences -->
@@ -42,11 +48,13 @@
     <content lang="fr">Compétences Techniques</content>
     <content lang="en">Technical Skills</content>
     <content lang="ar">المهارات التقنية</content>
+    <content lang="ja">技術スキル</content>
   </block>
   <block id="skills_list">
     <content lang="fr">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
     <content lang="en">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
     <content lang="ar">بايثون، C#، جافا، SQL، XML، RDF، SPARQL</content>
+    <content lang="ja">Python、C#、Java、SQL、XML、RDF、SPARQL</content>
   </block>
 
   <!-- Expérience professionnelle -->
@@ -54,17 +62,21 @@
     <content lang="fr">Expérience</content>
     <content lang="en">Experience</content>
     <content lang="ar">الخبرة</content>
+    <content lang="ja">職務経験</content>
   </block>
   <block id="exp_holydis_ai">
     <content lang="fr">AI Software Engineer – Holy-Dis (juil. 2024 – aujourd’hui)</content>
     <content lang="en">AI Software Engineer – Holy-Dis (Jul 2024 – present)</content>
     <content lang="ar">مهندسة برمجيات ذكاء اصطناعي – Holy-Dis (يوليو 2024 – الآن)</content>
+    <content lang="ja">AIソフトウェアエンジニア – Holy-Dis（2024年7月〜現在）</content>
   </block>
   <block id="exp_holydis_fs">
     <content lang="fr">Ingénieure Full-Stack – Holy-Dis (sept. 2023 – aujourd’hui)</content>
     <content lang="en">Full-Stack Developer – Holy-Dis (Sep 2023 – present)</content>
     <content lang="ar">مطورة كاملة – Holy-Dis (سبتمبر 2023 – الآن)</content>
+    <content lang="ja">フルスタック開発者 – Holy-Dis（2023年9月〜現在）</content>
   </block>
+
 
   <!-- TPs de Web Sémantique -->
   <block id="tp_ws_title">
