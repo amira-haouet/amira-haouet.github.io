@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="{{ current_lang }}">
+<html lang="{{ current_lang }}"
+  prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ schema: https://schema.org/">
 
 <head>
   {% for l, href in alternates.items() %}
@@ -18,6 +19,9 @@
   <meta name="description" content="{{ texts['meta_description'] }}">
   <meta name="keywords" content="{{ texts['meta_keywords'] }}">
   <meta name="author" content="{{ texts['personal_name'] }}">
+  <meta property="rdfa:usesVocabulary" content="https://schema.org/" />
+  <meta property="rdfa:usesVocabulary" content="http://xmlns.com/foaf/0.1/" />
+
   <link rel="author" href="{{ texts['social_linkedin'] }}">
 
   <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
@@ -82,7 +86,7 @@
         <div vocab="https://schema.org/" typeof="Person">
           <span property="name">{{ texts['personal_name'] }}</span><br>
           <span property="jobTitle">{{ texts['personal_title'] }}</span><br>
-          <a href="mailto:{{ texts['personal_email'] }}" property="email">{{ texts['personal_email'] }}</a>
+          <a href="mailto:{{ texts['personal_email'] }}" property="schema:email">{{ texts['personal_email'] }}</a>
         </div>
         <!-- FOAF RDFa complémentaire -->
         <div vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
