@@ -31,7 +31,6 @@ AVAILABLE_LANGS = ['fr', 'en', 'ar']
 DEFAULT_LANG = 'fr'
 
 def detect_lang():
-    """Déterminer la langue selon les priorités définies"""
     g = request.args.get('lang')
     if g in AVAILABLE_LANGS:
         return g
@@ -70,6 +69,7 @@ def index():
 # === 6. Générateur de pages statiques ===
 def generate_static_pages(output_dir="static_site"):
     os.makedirs(output_dir, exist_ok=True)
+    print("🛠 Génération des fichiers HTML statiques…")
     for lang in AVAILABLE_LANGS:
         with app.test_request_context(f"/?lang={lang}"):
             lang_code = detect_lang()
@@ -81,9 +81,11 @@ def generate_static_pages(output_dir="static_site"):
                 alternates={l: f"{l}.html" for l in AVAILABLE_LANGS},
                 available=AVAILABLE_LANGS
             )
-            output_file = os.path.join(output_dir, f"{lang}.html" if lang != "fr" else "index.html")
-            with open(output_file, "w", encoding="utf-8") as f:
+            filename = f"{lang}.html" if lang != "fr" else "index.html"
+            output_path = os.path.join(output_dir, filename)
+            with open(output_path, "w", encoding="utf-8") as f:
                 f.write(html)
+            print(f"✅ {filename} généré.")
 
 # === 7. Vérification des traductions ===
 def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LANGS):
@@ -98,11 +100,6 @@ def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LAN
 
 # === 8. Main ===
 if __name__ == '__main__':
-    # Vérification des traductions
-    test_missing_translations()
-
-    # Optionnel : Générer les pages statiques si demandé
-    generate_static_pages()
-
-    # Lancer le serveur Flask pour test local
-    app.run(debug=True)
+    test_missing_translations()          # vérifie les traductions
+    generate_static_pages()              # génère automatiquement à chaque lancement
+    app.run(debug=True)                  # lance le serveur local
