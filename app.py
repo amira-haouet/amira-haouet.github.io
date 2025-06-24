@@ -74,25 +74,16 @@ def generate_static_pages(output_dir="static_site"):
         with app.test_request_context(f"/?lang={lang}"):
             lang_code = detect_lang()
             session['lang'] = lang_code
-            texts = {
-                bid: translations[bid].get(lang_code, f"[{bid} missing in {lang_code}]")
-                for bid in translations
-            }
-            alternates = {
-                l: f"{l}.html"
-                for l in AVAILABLE_LANGS
-            }
             html = render_template(
-                'index.html',
-                texts=texts,
+                "index.html",
+                texts={bid: translations[bid].get(lang_code, '') for bid in translations},
                 current_lang=lang_code,
-                alternates=alternates,
+                alternates={l: f"{l}.html" for l in AVAILABLE_LANGS},
                 available=AVAILABLE_LANGS
             )
-            filename = f"index.html" if lang == DEFAULT_LANG else f"{lang}.html"
-            with open(os.path.join(output_dir, filename), "w", encoding="utf-8") as f:
+            output_file = os.path.join(output_dir, f"{lang}.html" if lang != "fr" else "index.html")
+            with open(output_file, "w", encoding="utf-8") as f:
                 f.write(html)
-    print(f"✅ Pages statiques générées dans '{output_dir}/'.")
 
 # === 7. Vérification des traductions ===
 def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LANGS):
