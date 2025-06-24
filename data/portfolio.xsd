@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="portfolio">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="home"/>
+        <xs:element ref="about"/>
+        <xs:element ref="skills"/>
+        <xs:element ref="experience"/>
+        <xs:element ref="education"/>
+        <xs:element ref="semanticWebTPs"/>
+        <xs:element ref="video"/>
+        <xs:element ref="contact"/>
+        <xs:element ref="footer"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- Elements génériques -->
+  <xs:complexType name="langGroup">
+    <xs:sequence>
+      <xs:element name="lang" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="xs:string">
+              <xs:attribute name="code" type="xs:string" use="required"/>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="itemList">
+    <xs:sequence>
+      <xs:element name="item" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <!-- home -->
+  <xs:element name="home">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="personalName" type="xs:string"/>
+        <xs:element name="personalTitle" type="xs:string"/>
+        <xs:element name="cv" type="xs:string"/>
+        <xs:element name="socialLinks">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="linkedin" type="xs:string"/>
+              <xs:element name="email" type="xs:string"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="required"/>
+      <xs:attribute name="class_" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- about, skills, experience, education, semanticWebTPs -->
+  <xs:element name="about" type="sectionType"/>
+  <xs:element name="skills" type="sectionType"/>
+  <xs:element name="experience" type="sectionType"/>
+  <xs:element name="education" type="sectionType"/>
+  <xs:element name="semanticWebTPs" type="sectionType"/>
+
+  <xs:complexType name="sectionType">
+    <xs:sequence>
+      <xs:element name="subtitle" type="langGroup"/>
+      <xs:element name="items" type="itemList"/>
+    </xs:sequence>
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:attribute name="class_" type="xs:string" use="optional"/>
+  </xs:complexType>
+
+  <!-- video -->
+  <xs:element name="video">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="title" type="langGroup"/>
+        <xs:element name="iframe" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="required"/>
+      <xs:attribute name="class_" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- contact -->
+  <xs:element name="contact">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="subtitle" type="langGroup"/>
+        <xs:element name="email" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="id" type="xs:ID" use="required"/>
+      <xs:attribute name="class_" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <!-- footer -->
+  <xs:element name="footer">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="text" type="xs:string"/>
+      </xs:sequence>
+      <xs:attribute name="class_" type="xs:string" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

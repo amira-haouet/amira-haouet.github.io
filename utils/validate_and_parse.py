@@ -3,7 +3,7 @@ import xml.etree.ElementTree as ET
 
 # 1) Validation DTD
 print("🔍 Validation DTD…")
-dtd = etree.DTD('dtd/portfolio.dtd')
+dtd = etree.DTD('data/portfolio.dtd')
 xml_doc = etree.parse('portfolio.xml')
 if dtd.validate(xml_doc):
     print("✅ portfolio.xml est conforme à portfolio.dtd")

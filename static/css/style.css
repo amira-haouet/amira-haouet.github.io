@@ -1900,4 +1900,20 @@ footer {
     body {
         background: white !important;
     }
+
+    .language-selector-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+.language-selector-nav img {
+  cursor: pointer;
+  border-radius: 3px;
+  transition: transform 0.2s;
+}
+.language-selector-nav img:hover {
+  transform: scale(1.1);
+}
+
 }

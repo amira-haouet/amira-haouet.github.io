@@ -6,6 +6,11 @@
   <link rel="alternate" href="{{ href }}" hreflang="{{ l }}" />
   {% endfor %}
   <meta charset="UTF-8">
+  <!-- Métadonnées RDFa Dublin Core -->
+  <meta property="dc:creator" content="{{ texts['personal_name'] }}">
+  <meta property="dc:language" content="{{ current_lang }}">
+  <meta property="dc:title" content="{{ texts['personal_title'] }}">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Titre et meta dynamiques -->
@@ -21,7 +26,7 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body {% if current_lang == 'ar' %}dir="rtl"{% endif %}>
+<body lang="{{ current_lang }}" {% if current_lang=='ar' %}dir="rtl" {% endif %}>
 
   <!-- Splash et particules -->
   <div class="loading-screen" id="loadingScreen">
@@ -47,6 +52,18 @@
       <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
     </div>
   </nav>
+  <!-- Sélecteur de langue dans la navbar -->
+  <div class="language-selector-nav">
+    <a href="?lang=fr" aria-label="Français">
+      <img src="{{ url_for('static', filename='assets/fr.png') }}" alt="FR" width="20">
+    </a>
+    <a href="?lang=en" aria-label="English">
+      <img src="{{ url_for('static', filename='assets/en.png') }}" alt="EN" width="20">
+    </a>
+    <a href="?lang=ar" aria-label="العربية">
+      <img src="{{ url_for('static', filename='assets/ar.png') }}" alt="AR" width="20">
+    </a>
+  </div>
 
   <!-- Section Home -->
   <section id="home" class="hero">
@@ -57,7 +74,8 @@
         <p class="hero-description">{{ texts['personal_title'] }}</p>
         <div class="hero-buttons">
           <a href="#contact" class="btn btn-primary">{{ texts['btn_contact'] }}</a>
-          <a href="{{ url_for('static', filename='assets/CvAmiraHAOUET_SP.pdf') }}" download class="btn btn-secondary">{{ texts['btn_download'] }}</a>
+          <a href="{{ url_for('static', filename='assets/CvAmiraHAOUET_SP.pdf') }}" download
+            class="btn btn-secondary">{{ texts['btn_download'] }}</a>
         </div>
 
         <!-- RDFa schema.org pour l'indexation sémantique -->
@@ -65,6 +83,12 @@
           <span property="name">{{ texts['personal_name'] }}</span><br>
           <span property="jobTitle">{{ texts['personal_title'] }}</span><br>
           <a href="mailto:{{ texts['personal_email'] }}" property="email">{{ texts['personal_email'] }}</a>
+        </div>
+        <!-- FOAF RDFa complémentaire -->
+        <div vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
+          <span property="foaf:name">{{ texts['personal_name'] }}</span><br>
+          <span property="foaf:title">{{ texts['personal_title'] }}</span><br>
+          <a href="mailto:{{ texts['personal_email'] }}" property="foaf:mbox">{{ texts['personal_email'] }}</a>
         </div>
 
         <div class="social-links">

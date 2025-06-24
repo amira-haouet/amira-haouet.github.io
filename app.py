@@ -10,8 +10,8 @@ def inject_now():
     return { 'now': datetime.now }
 
 # 1) Validation DTD + chargement XML
-dtd = etree.DTD('dtd/portfolio.dtd')
-xml_doc = etree.parse('portfolio.xml')
+dtd = etree.DTD('data/portfolio.dtd')
+xml_doc = etree.parse('data/portfolio.xml')
 if not dtd.validate(xml_doc):
     raise RuntimeError("❌ portfolio.xml n'est pas conforme à portfolio.dtd")
 
@@ -75,3 +75,16 @@ def index():
 
 if __name__ == '__main__':
     app.run(debug=True)
+from lxml import etree
+
+def test_missing_translations(xml_path="data/content.xml", langs=["fr", "en", "ar"]):
+    tree = etree.parse(xml_path)
+    root = tree.getroot()
+    for block in root.findall("block"):
+        id_ = block.get("id")
+        langs_present = [c.get("lang") for c in block.findall("content")]
+        for lang in langs:
+            if lang not in langs_present:
+                print(f"❌ Bloc {id_} manque {lang}")
+
+test_missing_translations()

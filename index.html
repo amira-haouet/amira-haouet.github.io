@@ -52,6 +52,18 @@
       <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
     </div>
   </nav>
+  <!-- Sélecteur de langue dans la navbar -->
+  <div class="language-selector-nav">
+    <a href="?lang=fr" aria-label="Français">
+      <img src="{{ url_for('static', filename='assets/fr.png') }}" alt="FR" width="20">
+    </a>
+    <a href="?lang=en" aria-label="English">
+      <img src="{{ url_for('static', filename='assets/en.png') }}" alt="EN" width="20">
+    </a>
+    <a href="?lang=ar" aria-label="العربية">
+      <img src="{{ url_for('static', filename='assets/ar.png') }}" alt="AR" width="20">
+    </a>
+  </div>
 
   <!-- Section Home -->
   <section id="home" class="hero">
