@@ -320,77 +320,82 @@
     });
   });
 
-(function() {
+
+(async function () {
   const availableLangs = ['fr', 'en', 'ar', 'ja'];
   const defaultLang = 'fr';
-
-  function getLangFromUrl() {
-    const params = new URLSearchParams(window.location.search);
-    const lang = params.get('lang');
-    return availableLangs.includes(lang) ? lang : null;
-  }
-
-  function getLangFromSession() {
-    const lang = sessionStorage.getItem('lang');
-    return availableLangs.includes(lang) ? lang : null;
-  }
-
-  function getLangFromBrowser() {
-    const browserLang = navigator.language?.substring(0, 2);
-    return availableLangs.includes(browserLang) ? browserLang : null;
-  }
+  const xmlPath = '/static/data/portfolio.xml'; // <-- adapte ce chemin si nécessaire
 
   function getLang() {
-    return getLangFromUrl()
-        || getLangFromSession()
-        || getLangFromBrowser()
-        || defaultLang;
+    const urlParam = new URLSearchParams(window.location.search).get("lang");
+    if (availableLangs.includes(urlParam)) return urlParam;
+    const sessionLang = sessionStorage.getItem("lang");
+    if (availableLangs.includes(sessionLang)) return sessionLang;
+    const browserLang = navigator.language?.substring(0, 2);
+    if (availableLangs.includes(browserLang)) return browserLang;
+    return defaultLang;
   }
 
-  function updateLangLinks(currentLang) {
-    document.querySelectorAll('link[rel="alternate"]').forEach(link => {
-      const href = new URL(link.href, window.location.origin);
-      const hreflang = link.getAttribute('hreflang');
-      href.searchParams.set('lang', hreflang);
-      link.href = href.toString();
-    });
-  }
-
-  function loadLangContent(lang) {
-    document.documentElement.lang = lang;
-    sessionStorage.setItem('lang', lang);
-    updateLangLinks(lang);
-
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const text = el.getAttribute(`data-${lang}`);
-      if (text) el.innerHTML = text;
+  function applyTranslations(xml, lang) {
+    const blocks = xml.querySelectorAll('block');
+    blocks.forEach(block => {
+      const id = block.getAttribute('id');
+      const content = block.querySelector(`content[lang="${lang}"]`);
+      if (content && content.textContent) {
+        const target = document.querySelector(`[data-block="${id}"]`);
+        if (target) target.innerHTML = content.textContent;
+      }
     });
 
-    // Change video
-    const videoFrame = document.querySelector('#video iframe');
-    if (videoFrame && videoFrame.src) {
-      const src = new URL(videoFrame.src);
-      src.searchParams.set('hl', lang);
-      videoFrame.src = src.toString();
+    // Iframe vidéo si présent
+    const videoBlock = xml.querySelector('block#video_iframe > content[lang="' + lang + '"]');
+    if (videoBlock) {
+      const wrapper = document.querySelector('#video iframe');
+      if (wrapper) {
+        wrapper.outerHTML = videoBlock.textContent.trim();
+      }
     }
+
+    // Metadonnées (titre, description, etc.)
+    const titleBlock = xml.querySelector('block#personal_title > content[lang="' + lang + '"]');
+    if (titleBlock) {
+      document.title = `Amira Haouet – ${titleBlock.textContent}`;
+    }
+
+    const metaDesc = xml.querySelector('block#meta_description > content[lang="' + lang + '"]');
+    if (metaDesc) {
+      document.querySelector('meta[name="description"]').setAttribute('content', metaDesc.textContent);
+    }
+
+    sessionStorage.setItem("lang", lang);
+    document.documentElement.lang = lang;
   }
 
-  function handleLanguageSwitch() {
+  function attachLanguageSwitch() {
     document.querySelectorAll('.language-selector-nav a').forEach(link => {
-      link.addEventListener('click', function(e) {
+      link.addEventListener('click', e => {
         e.preventDefault();
         const lang = link.getAttribute('href').split('lang=')[1];
-        const currentUrl = new URL(window.location.href);
-        currentUrl.searchParams.set('lang', lang);
+        const url = new URL(window.location.href);
+        url.searchParams.set('lang', lang);
         sessionStorage.setItem('lang', lang);
-        window.location.href = currentUrl.toString();
+        window.location.href = url.toString();
       });
     });
   }
 
-  const selectedLang = getLang();
-  loadLangContent(selectedLang);
-  handleLanguageSwitch();
+  // Charger le XML et appliquer la langue
+  try {
+    const lang = getLang();
+    const response = await fetch(xmlPath);
+    const text = await response.text();
+    const parser = new DOMParser();
+    const xml = parser.parseFromString(text, "application/xml");
+    applyTranslations(xml, lang);
+    attachLanguageSwitch();
+  } catch (err) {
+    console.error("Erreur lors du chargement des traductions XML :", err);
+  }
 })();
 </script>
 
