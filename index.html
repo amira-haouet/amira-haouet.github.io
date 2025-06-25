@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" 
-  prefix="foaf: http://xmlns.com/foaf/0.1/ 
+<html lang="fr" prefix="foaf: http://xmlns.com/foaf/0.1/ 
           dc: http://purl.org/dc/terms/
           rdfs: http://www.w3.org/2000/01/rdf-schema#
           xsd: http://www.w3.org/2001/XMLSchema#">
@@ -10,19 +9,20 @@
   <link rel="alternate" href="en.html" hreflang="en" />
   <link rel="alternate" href="ar.html" hreflang="ar" />
   <link rel="alternate" href="ja.html" hreflang="ja" />
-  
+
   <meta charset="UTF-8">
-  
+
   <!-- Métadonnées Dublin Core -->
   <meta property="dc:creator" content="Amira Haouet">
   <meta property="dc:language" content="fr">
   <meta property="dc:title" content="AI Software Engineer et Ingénieure Full-Stack">
   <meta property="dc:description" content="Portfolio professionnel d'Amira Haouet">
   <meta property="dc:date" content="2025">
-  
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amira Haouet – AI Software Engineer et Ingénieure Full-Stack</title>
-  <meta name="description" content="Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l'IA, le web sémantique et la recherche.">
+  <meta name="description"
+    content="Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l'IA, le web sémantique et la recherche.">
   <meta name="keywords" content="Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio">
   <meta name="author" content="Amira Haouet">
 
@@ -35,10 +35,11 @@
 <body lang="fr" vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
 
   <!-- Splash et particules -->
-  <div class="loading-screen" id="loadingScreen">
-    <div class="loading-spinner"></div>
-    <div class="loading-text">Chargement du portfolio...</div>
-  </div>
+<!-- Splash et particules -->
+<div class="loading-screen" id="loadingScreen">
+  <div class="loading-spinner"></div>
+  <div class="loading-text" data-block="loading_text"></div>
+</div>
   <div class="particles" id="particles"></div>
 
   <!-- Navbar -->
@@ -48,12 +49,12 @@
         <span property="foaf:name">Amira Haouet</span>
       </div>
       <ul class="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">À propos</a></li>
-        <li class="nav-item"><a href="#skills" class="nav-link">Compétences</a></li>
-        <li class="nav-item"><a href="#experience" class="nav-link">Expérience</a></li>
-        <li class="nav-item"><a href="#education" class="nav-link">Formation</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+        <li><a href="#home" data-block="nav_home"></a></li>
+        <li><a href="#about" data-block="nav_about"></a></li>
+        <li><a href="#skills" data-block="nav_skills"></a></li>
+        <li><a href="#experience" data-block="nav_experience"></a></li>
+        <li><a href="#education" data-block="nav_education"></a></li>
+        <li><a href="#contact" data-block="nav_contact"></a></li>
       </ul>
 
       <div class="language-selector-nav">
@@ -79,25 +80,29 @@
   <section id="home" class="hero">
     <div class="hero-container">
       <div class="hero-content" data-aos="fade-right">
-        <h1 property="foaf:name">Amira Haouet</h1>
+        <h1 property="foaf:name" data-block="personal_name"></h1>
         <div class="typewriter"><span class="typewriter-text"></span></div>
-        <p class="hero-description" property="foaf:title">AI Software Engineer et Ingénieure Full-Stack</p>
-        
+        <p class="hero-description" property="foaf:title" data-block="personal_title"></p>
+
         <!-- Informations personnelles FOAF cachées pour les robots -->
         <div style="display: none;">
-          <span property="foaf:givenName">Amira</span>
-          <span property="foaf:familyName">Haouet</span>
-          <span property="foaf:gender">female</span>
-        </div>
-        
-        <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">Me contacter</a>
-          <a href="/static/assets/CvAmiraHAOUET_SP.pdf" download property="foaf:page"
-            class="btn btn-secondary">Télécharger CV</a>
+          <h1 data-block="personal_name"></h1>
+          <p data-block="personal_title"></p>
+
         </div>
 
+        <div class="hero-buttons">
+          <p>
+            <a class="btn btn-primary" href="#contact" data-block="btn_contact"></a>
+          </p>
+          <a href="/static/assets/CvAmiraHAOUET_SP.pdf" download property="foaf:page" class="btn btn-secondary"
+            data-block="btn_download"></a>
+        </div>
+
+
         <div class="social-links">
-          <a href="https://www.linkedin.com/in/amira-haouet/" target="_blank" property="foaf:account" typeof="foaf:OnlineAccount">
+          <a href="https://www.linkedin.com/in/amira-haouet/" target="_blank" property="foaf:account"
+            typeof="foaf:OnlineAccount">
             <i class="fab fa-linkedin"></i>
             <span style="display: none;" property="foaf:accountServiceHomepage" resource="https://linkedin.com"></span>
             <span style="display: none;" property="foaf:accountName">amira-haouet</span>
@@ -105,7 +110,7 @@
           <a href="mailto:haouetamira@gmail.com" property="foaf:mbox"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
-      
+
       <div class="hero-image" data-aos="fade-left">
         <div class="image-wrapper">
           <img src="/static/assets/profile.jpg" alt="Amira Haouet" property="foaf:img">
@@ -118,20 +123,17 @@
   <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>À propos</h2>
-        <p class="section-subtitle">Ingénieure Informatique et AI Enthusiast</p>
+        <h2 data-block="nav_about"></h2>
+        <p class="section-subtitle" data-block="subtitle_about"></p>
       </div>
       <div class="about-content">
         <div property="foaf:currentProject" typeof="foaf:Project">
-          <p>Actuellement <span property="foaf:title">AI Software Engineer</span> chez 
-          <span property="foaf:member" typeof="foaf:Organization">
-            <span property="foaf:name">Holy-Dis</span>
-          </span>, je me spécialise dans le développement d'applications intelligentes et la recherche en IA.</p>
+          <p>
+            <span data-block="current_project_ai"></span>
+          </p>
         </div>
-        
         <div property="foaf:interest">
-          <p>Mes domaines d'expertise incluent l'intelligence artificielle, le web sémantique, 
-          et le développement full-stack. Passionnée par l'innovation technologique et la recherche.</p>
+          <p data-block="personal_description"></p>
         </div>
       </div>
     </div>
@@ -141,159 +143,163 @@
   <section id="skills" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>Compétences Techniques</h2>
-        <p class="section-subtitle">Technologies et Outils</p>
+        <h2 data-block="skills_title"></h2>
+        <p class="section-subtitle" data-block="subtitle_skills"></p>
       </div>
       <div class="skills-grid">
         <div property="foaf:topic_interest">
-          <h3>Langages de Programmation</h3>
+          <h3 data-block="skills_prog_title">Langages de Programmation</h3>
           <p>
-            <span property="foaf:topic_interest">Python</span>, 
-            <span property="foaf:topic_interest">C#</span>, 
-            <span property="foaf:topic_interest">Java</span>, 
-            <span property="foaf:topic_interest">JavaScript</span>
+            <span property="foaf:topic_interest" data-block="interest_python"></span>,
+            <span property="foaf:topic_interest" data-block="interest_csharp"></span>,
+            <span property="foaf:topic_interest" data-block="interest_java"></span>,
+            <span property="foaf:topic_interest" data-block="interest_javascript"></span>
           </p>
         </div>
-        
         <div property="foaf:topic_interest">
-          <h3>Technologies Web et Données</h3>
+          <h3 data-block="skills_webdata_title">Technologies Web et Données</h3>
           <p>
-            <span property="foaf:topic_interest">SQL</span>, 
-            <span property="foaf:topic_interest">XML</span>, 
-            <span property="foaf:topic_interest">RDF</span>, 
-            <span property="foaf:topic_interest">SPARQL</span>
+            <span property="foaf:topic_interest" data-block="interest_sql"></span>,
+            <span property="foaf:topic_interest" data-block="interest_xml"></span>,
+            <span property="foaf:topic_interest" data-block="interest_rdf"></span>,
+            <span property="foaf:topic_interest" data-block="interest_sparql"></span>
           </p>
         </div>
-        
         <div property="foaf:topic_interest">
-          <h3>Domaines d'Expertise</h3>
+          <h3 data-block="skills_expert_title">Domaines d'Expertise</h3>
           <p>
-            <span property="foaf:topic_interest">Intelligence Artificielle</span>, 
-            <span property="foaf:topic_interest">Web Sémantique</span>, 
-            <span property="foaf:topic_interest">Développement Full-Stack</span>
+            <span property="foaf:topic_interest" data-block="interest_ai"></span>,
+            <span property="foaf:topic_interest" data-block="interest_semantic_web"></span>,
+            <span property="foaf:topic_interest" data-block="interest_fullstack"></span>
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section Experience -->
-  <section id="experience" class="section" data-aos="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <h2>Expérience Professionnelle</h2>
-        <p class="section-subtitle">Parcours professionnel</p>
-      </div>
-      
-      <div class="experience-list">
-        <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
-          <h3>
-            <span property="foaf:title">AI Software Engineer</span> - 
-            <span property="foaf:name">Holy-Dis</span>
-          </h3>
-          <p class="period">Juillet 2024 – Présent</p>
-          <div property="foaf:currentProject" typeof="foaf:Project">
-            <p property="foaf:name">Développement de solutions d'intelligence artificielle</p>
-          </div>
+<section id="experience" class="section" data-aos="fade-up">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-block="experience_title"></h2>
+      <p class="section-subtitle" data-block="subtitle_experience"></p>
+    </div>
+
+    <div class="experience-list">
+      <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
+        <h3 data-block="exp_holydis_ai"></h3>
+        <p class="period">Juillet 2024 – Présent</p>
+        <div property="foaf:currentProject" typeof="foaf:Project">
+          <p property="foaf:name" data-block="current_project_ai"></p>
         </div>
-        
-        <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
-          <h3>
-            <span property="foaf:title">Ingénieure Full-Stack</span> - 
-            <span property="foaf:name">Holy-Dis</span>
-          </h3>
-          <p class="period">Septembre 2023 – Juillet 2024</p>
-          <div property="foaf:currentProject" typeof="foaf:Project">
-            <p property="foaf:name">Développement d'applications web complètes</p>
-          </div>
+      </div>
+
+      <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
+        <h3 data-block="exp_holydis_fs"></h3>
+        <p class="period">Septembre 2023 – Juillet 2024</p>
+        <div property="foaf:currentProject" typeof="foaf:Project">
+          <p property="foaf:name">Développement d'applications web complètes</p>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
 
   <!-- Section Education -->
   <section id="education" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>Formation Académique</h2>
-        <p class="section-subtitle">Parcours éducatif</p>
+        <h2 data-block="education_title"></h2>
+        <p class="section-subtitle" data-block="subtitle_education"></p>
       </div>
-      
+
       <div class="education-list">
         <div property="foaf:schoolHomepage" typeof="foaf:Organization">
-          <h3>Ingénierie Informatique</h3>
-          <p property="foaf:name">Sorbonne Paris Nord</p>
+          <h3 data-block="education_sorbonne_title">Ingénierie Informatique</h3>
+          <p property="foaf:name" data-block="org_sorbonne"></p>
           <p class="period">2023 – 2026</p>
         </div>
-        
+
         <div property="foaf:schoolHomepage" typeof="foaf:Organization">
-          <h3>Licence Informatique</h3>
-          <p property="foaf:name">UPJV (Université de Picardie Jules Verne)</p>
+          <h3 data-block="education_upjv_title">Licence Informatique</h3>
+          <p property="foaf:name" data-block="org_upjv"></p>
           <p class="period">2022 – 2023</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Section Projets Web Sémantique -->
+
   <section id="ws" class="section" data-aos="fade-up">
     <div class="container">
-      <h2>Projets Web Sémantique</h2>
+      <h2 data-block="tp_ws_title"></h2>
       <div property="foaf:currentProject" typeof="foaf:Project">
-        <h3 property="foaf:name">Travaux Pratiques en Technologies Sémantiques</h3>
+        <h3 property="foaf:name" data-block="current_project_ws"></h3>
         <ul>
-          <li property="foaf:topic_interest">Définition d'une DTD pour contenu multilingue (XML + DTD)</li>
-          <li property="foaf:topic_interest">Validation avec un schéma XSD personnalisé</li>
-          <li property="foaf:topic_interest">Transformation XML en HTML5 avec XSLT</li>
-          <li property="foaf:topic_interest">Modélisation RDF / RDFS pour enrichir les métadonnées</li>
-          <li property="foaf:topic_interest">Annotation RDFa sur le HTML pour SEO et accessibilité</li>
+          <li property="foaf:topic_interest" data-block="tp_ws_dtd"></li>
+          <li property="foaf:topic_interest" data-block="tp_ws_xsd"></li>
+          <li property="foaf:topic_interest" data-block="tp_ws_xslt"></li>
+          <li property="foaf:topic_interest" data-block="tp_ws_rdf"></li>
+          <li property="foaf:topic_interest" data-block="tp_ws_rdfa"></li>
         </ul>
       </div>
     </div>
   </section>
 
+
   <!-- Section Vidéo -->
   <section id="video" class="section" data-aos="fade-up">
     <div class="container">
-      <h2>Présentation Vidéo</h2>
-      <div class="video-wrapper">
-        <iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" 
-                title="Présentation Amira Haouet" 
-                allowfullscreen
-                property="foaf:page"></iframe>
+      <h2 data-block="video_title"></h2>
+      <div class="video-wrapper" data-block="video_iframe">
+        <!-- L’iframe sera injecté dynamiquement depuis le XML via JavaScript -->
       </div>
     </div>
   </section>
 
-  <!-- Section Contact -->
-  <section id="contact" class="section" data-aos="fade-up">
-    <div class="container">
-      <div class="section-header">
-        <h2>Contact</h2>
-        <p class="section-subtitle">Entrons en contact</p>
-      </div>
-      
-      <div class="contact-info">
-        <p>Email : <a href="mailto:haouetamira@gmail.com" property="foaf:mbox">haouetamira@gmail.com</a></p>
-        <p>LinkedIn : <a href="https://www.linkedin.com/in/amira-haouet/" property="foaf:homepage" target="_blank">linkedin.com/in/amira-haouet</a></p>
-        
-        <!-- Informations de contact supplémentaires cachées -->
-        <div style="display: none;">
-          <span property="foaf:based_near" typeof="foaf:Organization">
-            <span property="foaf:name">Paris, France</span>
-          </span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© 2025 <span property="foaf:name">Amira Haouet</span>. Tous droits réservés.</p>
-      <p property="foaf:made">Portfolio développé avec les technologies du web sémantique</p>
+<!-- Section Contact -->
+<section id="contact" class="section" data-aos="fade-up">
+  <div class="container">
+    <div class="section-header">
+      <h2 data-block="nav_contact"></h2>
+      <p class="section-subtitle" data-block="subtitle_contact"></p>
     </div>
-  </footer>
+
+    <div class="contact-info">
+      <p>
+        Email :
+        <a href="mailto:haouetamira@gmail.com" property="foaf:mbox" data-block="personal_email"></a>
+      </p>
+      <p>
+        LinkedIn :
+        <a href="https://www.linkedin.com/in/amira-haouet/" property="foaf:homepage" target="_blank"
+           data-block="account_linkedin_url"></a>
+      </p>
+
+      <!-- Informations de contact supplémentaires cachées -->
+      <div style="display: none;">
+        <span property="foaf:based_near" typeof="foaf:Organization">
+          <span property="foaf:name" data-block="personal_location"></span>
+        </span>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <p>
+      © <span data-block="footer_year"></span>
+      <span property="foaf:name" data-block="personal_name"></span>.
+      <span data-block="footer_rights"></span>
+    </p>
+    <p property="foaf:made" data-block="footer_made"></p>
+  </div>
+</footer>
+
 
   <button class="scroll-to-top" id="scrollToTop" aria-label="Haut de page">
     <i class="fas fa-chevron-up"></i>
@@ -304,107 +310,108 @@
   <script src="/static/js/portfolio.js" defer></script>
 
   <!-- Métadonnées FOAF supplémentaires pour les moteurs de recherche -->
-<script>
-  function switchLang(lang) {
-    document.documentElement.lang = lang;
-    localStorage.setItem("lang", lang);
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const txt = el.getAttribute(`data-${lang}`);
-      if (txt) el.textContent = txt;
-    });
-  }
-
-  // Charger la langue au démarrage
-  const savedLang = localStorage.getItem("lang") || "fr";
-  switchLang(savedLang);
-
-  // Attacher les clics sur les drapeaux
-  document.querySelectorAll('.language-selector-nav a').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const lang = link.getAttribute('href').replace('?lang=', '');
-      switchLang(lang);
-    });
-  });
-
-(async function () {
-  const availableLangs = ['fr', 'en', 'ar', 'ja'];
-  const defaultLang = 'fr';
-  const xmlPath = '/static/portfolio.xml'; // <-- adapte ce chemin si nécessaire
-
-  function getLang() {
-    const urlParam = new URLSearchParams(window.location.search).get("lang");
-    if (availableLangs.includes(urlParam)) return urlParam;
-    const sessionLang = sessionStorage.getItem("lang");
-    if (availableLangs.includes(sessionLang)) return sessionLang;
-    const browserLang = navigator.language?.substring(0, 2);
-    if (availableLangs.includes(browserLang)) return browserLang;
-    return defaultLang;
-  }
-
-  function applyTranslations(xml, lang) {
-    const blocks = xml.querySelectorAll('block');
-    blocks.forEach(block => {
-      const id = block.getAttribute('id');
-      const content = block.querySelector(`content[lang="${lang}"]`);
-      if (content && content.textContent) {
-        const target = document.querySelector(`[data-block="${id}"]`);
-        if (target) target.innerHTML = content.textContent;
-      }
-    });
-
-    // Iframe vidéo si présent
-    const videoBlock = xml.querySelector('block#video_iframe > content[lang="' + lang + '"]');
-    if (videoBlock) {
-      const wrapper = document.querySelector('#video iframe');
-      if (wrapper) {
-        wrapper.outerHTML = videoBlock.textContent.trim();
-      }
+  <script>
+    function switchLang(lang) {
+      document.documentElement.lang = lang;
+      localStorage.setItem("lang", lang);
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const txt = el.getAttribute(`data-${lang}`);
+        if (txt) el.textContent = txt;
+      });
     }
 
-    // Metadonnées (titre, description, etc.)
-    const titleBlock = xml.querySelector('block#personal_title > content[lang="' + lang + '"]');
-    if (titleBlock) {
-      document.title = `Amira Haouet – ${titleBlock.textContent}`;
-    }
+    // Charger la langue au démarrage
+    const savedLang = localStorage.getItem("lang") || "fr";
+    switchLang(savedLang);
 
-    const metaDesc = xml.querySelector('block#meta_description > content[lang="' + lang + '"]');
-    if (metaDesc) {
-      document.querySelector('meta[name="description"]').setAttribute('content', metaDesc.textContent);
-    }
-
-    sessionStorage.setItem("lang", lang);
-    document.documentElement.lang = lang;
-  }
-
-  function attachLanguageSwitch() {
+    // Attacher les clics sur les drapeaux
     document.querySelectorAll('.language-selector-nav a').forEach(link => {
-      link.addEventListener('click', e => {
+      link.addEventListener('click', (e) => {
         e.preventDefault();
-        const lang = link.getAttribute('href').split('lang=')[1];
-        const url = new URL(window.location.href);
-        url.searchParams.set('lang', lang);
-        sessionStorage.setItem('lang', lang);
-        window.location.href = url.toString();
+        const lang = link.getAttribute('href').replace('?lang=', '');
+        switchLang(lang);
       });
     });
-  }
 
-  // Charger le XML et appliquer la langue
-  try {
-    const lang = getLang();
-    const response = await fetch(xmlPath);
-    const text = await response.text();
-    const parser = new DOMParser();
-    const xml = parser.parseFromString(text, "application/xml");
-    applyTranslations(xml, lang);
-    attachLanguageSwitch();
-  } catch (err) {
-    console.error("Erreur lors du chargement des traductions XML :", err);
-  }
-})();
-</script>
+    (async function () {
+      const availableLangs = ['fr', 'en', 'ar', 'ja'];
+      const defaultLang = 'fr';
+      const xmlPath = '/static/portfolio.xml'; // <-- adapte ce chemin si nécessaire
+
+      function getLang() {
+        const urlParam = new URLSearchParams(window.location.search).get("lang");
+        if (availableLangs.includes(urlParam)) return urlParam;
+        const sessionLang = sessionStorage.getItem("lang");
+        if (availableLangs.includes(sessionLang)) return sessionLang;
+        const browserLang = navigator.language?.substring(0, 2);
+        if (availableLangs.includes(browserLang)) return browserLang;
+        return defaultLang;
+      }
+
+      function applyTranslations(xml, lang) {
+        const blocks = xml.querySelectorAll('block');
+        blocks.forEach(block => {
+          const id = block.getAttribute('id');
+          const content = block.querySelector(`content[lang="${lang}"]`);
+          if (content && content.textContent) {
+            const target = document.querySelector(`[data-block="${id}"]`);
+            if (target) target.innerHTML = content.textContent;
+          }
+        });
+
+        // Iframe vidéo si présent
+        const videoBlock = xml.querySelector('block#video_iframe > content[lang="' + lang + '"]');
+        if (videoBlock) {
+          const wrapper = document.querySelector('#video iframe');
+          if (wrapper) {
+            wrapper.outerHTML = videoBlock.textContent.trim();
+          }
+        }
+
+        // Metadonnées (titre, description, etc.)
+        const titleBlock = xml.querySelector('block#personal_title > content[lang="' + lang + '"]');
+        if (titleBlock) {
+          document.title = `Amira Haouet – ${titleBlock.textContent}`;
+        }
+
+        const metaDesc = xml.querySelector('block#meta_description > content[lang="' + lang + '"]');
+        if (metaDesc) {
+          document.querySelector('meta[name="description"]').setAttribute('content', metaDesc.textContent);
+        }
+
+        sessionStorage.setItem("lang", lang);
+        document.documentElement.lang = lang;
+      }
+
+      function attachLanguageSwitch() {
+        document.querySelectorAll('.language-selector-nav a').forEach(link => {
+          link.addEventListener('click', e => {
+            e.preventDefault();
+            const lang = link.getAttribute('href').split('lang=')[1];
+            const url = new URL(window.location.href);
+            url.searchParams.set('lang', lang);
+            sessionStorage.setItem('lang', lang);
+            window.location.href = url.toString();
+          });
+        });
+      }
+
+      // Charger le XML et appliquer la langue
+      try {
+        const lang = getLang();
+        const response = await fetch(xmlPath);
+        const text = await response.text();
+        const parser = new DOMParser();
+        const xml = parser.parseFromString(text, "application/xml");
+        applyTranslations(xml, lang);
+        attachLanguageSwitch();
+      } catch (err) {
+        console.error("Erreur lors du chargement des traductions XML :", err);
+      }
+    })();
+  </script>
 
 
 </body>
+
 </html>
