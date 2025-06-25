@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-16"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
 
     <xsl:param name="lang" select="'fr'" />
 
-    <xsl:output method="html" indent="yes" encoding="UTF-16" />
+    <xsl:output method="html" indent="yes" encoding="UTF-8" />
 
     <xsl:template match="/">
         <html lang="{$lang}">
             <head>
-                <meta charset="UTF-16" />
+                <meta charset="UTF-8" />
                 <title>
                     <xsl:value-of select="portfolio/block[@id='personal_name']/content[@lang=$lang]" />
                 </title>
