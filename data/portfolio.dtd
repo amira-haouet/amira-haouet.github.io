@@ -1,9 +1,67 @@
-<!ELEMENT portfolio (block+)>
+<!ELEMENT portfolio (person, document, block+)>
+<!ATTLIST portfolio 
+  xmlns:dc CDATA #IMPLIED
+  xmlns:foaf CDATA #IMPLIED
+  xmlns:schema CDATA #IMPLIED
+>
 
-<!-- Un « block » correspond à une unité de contenu identifiée -->
-<!ELEMENT block (content+)>
-<!ATTLIST block id ID #REQUIRED  >
+<!-- Person -->
+<!ELEMENT person (foaf:name, foaf:title, foaf:mbox, foaf:homepage, schema:jobTitle, schema:worksFor)>
+<!ATTLIST person
+  typeof CDATA #IMPLIED
+>
 
-<!-- Un « content » porte le texte dans une langue donnée -->
+<!ELEMENT foaf:name (#PCDATA)>
+<!ELEMENT foaf:title (#PCDATA)>
+<!ELEMENT foaf:mbox (#PCDATA)>
+<!ELEMENT foaf:homepage (#PCDATA)>
+
+<!ELEMENT schema:jobTitle (#PCDATA)>
+<!ELEMENT schema:worksFor (schema:name)>
+<!ATTLIST schema:worksFor
+  typeof CDATA #IMPLIED
+>
+
+<!-- Document -->
+<!ELEMENT document (dc:creator, dc:title, dc:description, dc:subject, dc:type, dc:format, dc:identifier, dc:rights, dc:date)>
+<!ATTLIST document
+  typeof CDATA #IMPLIED
+>
+
+<!ELEMENT dc:creator (#PCDATA)>
+<!ELEMENT dc:title (#PCDATA)>
+<!ELEMENT dc:description (#PCDATA)>
+<!ELEMENT dc:subject (#PCDATA)>
+<!ELEMENT dc:type (#PCDATA)>
+<!ELEMENT dc:format (#PCDATA)>
+<!ELEMENT dc:identifier (#PCDATA)>
+<!ELEMENT dc:rights (#PCDATA)>
+<!ELEMENT dc:date (#PCDATA)>
+
+<!-- Blocs réutilisables -->
+<!ELEMENT block (content+, (schema:credentialCategory | schema:educationalLevel | schema:jobTitle | schema:hiringOrganization | schema:startDate | schema:learningResourceType | schema:about | schema:name | schema:description | schema:uploadDate | foaf:accountServiceHomepage | foaf:accountName)*)>
+<!ATTLIST block
+  id ID #REQUIRED
+  typeof CDATA #IMPLIED
+>
+
 <!ELEMENT content (#PCDATA)>
-<!ATTLIST content lang NMTOKEN #REQUIRED  >
+<!ATTLIST content
+  lang CDATA #REQUIRED
+>
+
+<!ELEMENT schema:credentialCategory (#PCDATA)>
+<!ELEMENT schema:educationalLevel (#PCDATA)>
+<!ELEMENT schema:hiringOrganization (schema:name)>
+<!ATTLIST schema:hiringOrganization
+  typeof CDATA #IMPLIED
+>
+<!ELEMENT schema:startDate (#PCDATA)>
+<!ELEMENT schema:learningResourceType (#PCDATA)>
+<!ELEMENT schema:about (#PCDATA)>
+<!ELEMENT schema:name (#PCDATA)>
+<!ELEMENT schema:description (#PCDATA)>
+<!ELEMENT schema:uploadDate (#PCDATA)>
+
+<!ELEMENT foaf:accountServiceHomepage (#PCDATA)>
+<!ELEMENT foaf:accountName (#PCDATA)>

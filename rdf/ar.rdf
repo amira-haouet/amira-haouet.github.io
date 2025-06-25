@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/"
+         xmlns:cv="http://rdfs.org/resume-rdf/">
+
+  <cv:CV>
+    <cv:summary>مهندسة برمجيات ذكاء اصطناعي ومطورة Full-Stack شغوفة بالويب الدلالي والذكاء الاصطناعي.</cv:summary>
+
+    <foaf:Person>
+      <foaf:name>أميرة حاوت</foaf:name>
+
+      <cv:hasContactInfo>
+        <cv:ContactInfo>
+          <cv:address>جامعة السوربون باريس نورد</cv:address>
+          <cv:phone>غير مذكور</cv:phone>
+          <cv:email>haouetamira@gmail.com</cv:email>
+        </cv:ContactInfo>
+      </cv:hasContactInfo>
+
+      <cv:hasWorkHistory>
+        <cv:Position>
+          <cv:positionTitle>مهندسة برمجيات ذكاء اصطناعي</cv:positionTitle>
+          <cv:employedIn>
+            <cv:Organization>
+              <foaf:name>Holy-Dis</foaf:name>
+            </cv:Organization>
+          </cv:employedIn>
+          <cv:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2024-07</cv:startDate>
+          <cv:description>تطوير نماذج ذكاء اصطناعي للتنبؤ بغيابات الموظفين.</cv:description>
+        </cv:Position>
+
+        <cv:Position>
+          <cv:positionTitle>مهندسة Full-Stack</cv:positionTitle>
+          <cv:employedIn>
+            <cv:Organization>
+              <foaf:name>Holy-Dis</foaf:name>
+            </cv:Organization>
+          </cv:employedIn>
+          <cv:startDate rdf:datatype="http://www.w3.org/2001/XMLSchema#gYearMonth">2023-09</cv:startDate>
+          <cv:description>تصميم وتطوير تطبيقات ويب باستخدام Python وFlask وReact.</cv:description>
+        </cv:Position>
+      </cv:hasWorkHistory>
+
+      <cv:hasEducation>
+        <cv:EducationEvent>
+          <cv:degree>شهادة مهندسة</cv:degree>
+          <cv:majorFieldOfStudy>علوم الحاسوب</cv:majorFieldOfStudy>
+          <cv:startDate>2023</cv:startDate>
+          <cv:institution>
+            <cv:Organization>
+              <foaf:name>معهد غاليليه، جامعة السوربون باريس نورد</foaf:name>
+            </cv:Organization>
+          </cv:institution>
+        </cv:EducationEvent>
+
+        <cv:EducationEvent>
+          <cv:degree>إجازة في علوم الحاسوب</cv:degree>
+          <cv:startDate>2022</cv:startDate>
+          <cv:endDate>2023</cv:endDate>
+          <cv:institution>
+            <cv:Organization>
+              <foaf:name>جامعة بيكاردي جول فيرن (UPJV)</foaf:name>
+            </cv:Organization>
+          </cv:institution>
+        </cv:EducationEvent>
+      </cv:hasEducation>
+
+      <cv:hasSkill>
+        <cv:Skill>بايثون، جافا، C#، جافاسكريبت</cv:Skill>
+        <cv:Skill>SQL، RDF، SPARQL</cv:Skill>
+        <cv:Skill>Flask، XML، XSLT</cv:Skill>
+      </cv:hasSkill>
+
+      <cv:hasLanguage>
+        <cv:Language>الإنجليزية</cv:Language>
+        <cv:Language>الفرنسية</cv:Language>
+        <cv:Language>العربية</cv:Language>
+      </cv:hasLanguage>
+
+      <cv:hasInterest>
+        <cv:Interest>الويب الدلالي</cv:Interest>
+        <cv:Interest>الذكاء الاصطناعي وعلوم البيانات</cv:Interest>
+        <cv:Interest>الكشافة والعمل التطوعي</cv:Interest>
+      </cv:hasInterest>
+    </foaf:Person>
+  </cv:CV>
+
+</rdf:RDF>
