@@ -117,7 +117,7 @@ def generate_static_pages(output_dir="static_site"):
                 f.write(html)
             print(f"✅ {filename} généré.")
 
-def test_missing_translations(xml_path="static/portfolio.xml", langs=AVAILABLE_LANGS):
+def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LANGS):
     try:
         tree = etree.parse(xml_path)
         root = tree.getroot()
