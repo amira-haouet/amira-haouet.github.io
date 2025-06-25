@@ -1,43 +1,50 @@
 <!DOCTYPE html>
-<html lang="{{ current_lang }}"
+<html lang="fr"
   prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ schema: https://schema.org/">
 
 <head>
-  {% for l, href in alternates.items() %}
-  <link rel="alternate" href="{{ href }}" hreflang="{{ l }}" />
-  {% endfor %}
+  
+  <link rel="alternate" href="fr.html" hreflang="fr" />
+  
+  <link rel="alternate" href="en.html" hreflang="en" />
+  
+  <link rel="alternate" href="ar.html" hreflang="ar" />
+  
+  <link rel="alternate" href="ja.html" hreflang="ja" />
+  
   <meta charset="UTF-16">
   <!-- Métadonnées RDFa Dublin Core -->
-  <meta property="dc:creator" content="{{ texts['personal_name'] }}">
-  <meta property="dc:language" content="{{ current_lang }}">
-  <meta property="dc:title" content="{{ texts['personal_title'] }}">
+  <meta property="dc:creator" content="Amira Haouet">
+  <meta property="dc:language" content="fr">
+  <meta property="dc:title" content="AI Software Engineer et Ingénieure Full-Stack">
   <link rel="alternate" href="en.html" hreflang="en" />
   <link rel="alternate" href="ar.html" hreflang="ar" />
   <link rel="alternate" href="ja.html" hreflang="ja" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Titre et meta dynamiques -->
-  <title>{{ texts['personal_name'] }} – {{ texts['personal_title'] }}</title>
-  <meta name="description" content="{{ texts['meta_description'] }}">
-  <meta name="keywords" content="{{ texts['meta_keywords'] }}">
-  <meta name="author" content="{{ texts['personal_name'] }}">
+  <title>Amira Haouet – AI Software Engineer et Ingénieure Full-Stack</title>
+  <meta name="description" content="Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack.
+      Passionnée par l’IA, le web sémantique et la recherche.">
+  <meta name="keywords" content="Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio">
+  <meta name="author" content="Amira Haouet">
   <meta property="rdfa:usesVocabulary" content="https://schema.org/" />
   <meta property="rdfa:usesVocabulary" content="http://xmlns.com/foaf/0.1/" />
 
-  <link rel="author" href="{{ texts['social_linkedin'] }}">
+  <link rel="author" href="https://www.linkedin.com/in/amira-haouet/">
 
-  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}" type="image/x-icon">
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
-<body lang="{{ current_lang }}" {% if current_lang=='ar' %}dir="rtl" {% endif %}>
+<body lang="fr" >
 
   <!-- Splash et particules -->
   <div class="loading-screen" id="loadingScreen">
     <div class="loading-spinner"></div>
-    <div class="loading-text">{{ texts['loading_text'] }}</div>
+    <div class="loading-text">Chargement du portfolio...</div>
   </div>
   <div class="particles" id="particles"></div>
 
@@ -45,31 +52,31 @@
   <nav class="navbar">
     <div class="nav-container">
       <div class="nav-logo" data-aos="fade-down">
-        <span>{{ texts['personal_name'] }}</span>
+        <span>Amira Haouet</span>
       </div>
       <ul class="nav-menu">
-        <li class="nav-item"><a href="#home" class="nav-link">{{ texts['nav_home'] }}</a></li>
-        <li class="nav-item"><a href="#about" class="nav-link">{{ texts['nav_about'] }}</a></li>
-        <li class="nav-item"><a href="#skills" class="nav-link">{{ texts['nav_skills'] }}</a></li>
-        <li class="nav-item"><a href="#experience" class="nav-link">{{ texts['nav_experience'] }}</a></li>
-        <li class="nav-item"><a href="#education" class="nav-link">{{ texts['nav_education'] }}</a></li>
-        <li class="nav-item"><a href="#contact" class="nav-link nav-cta">{{ texts['nav_contact'] }}</a></li>
+        <li class="nav-item"><a href="#home" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">À propos</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Compétences</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Expérience</a></li>
+        <li class="nav-item"><a href="#education" class="nav-link">Formation</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact</a></li>
       </ul>
 
 
 
       <div class="language-selector-nav">
         <a href="?lang=fr" aria-label="Français">
-          <img src="{{ url_for('static', filename='assets/fr.png') }}" alt="FR" width="24">
+          <img src="/static/assets/fr.png" alt="FR" width="24">
         </a>
         <a href="?lang=en" aria-label="English">
-          <img src="{{ url_for('static', filename='assets/en.png') }}" alt="EN" width="24">
+          <img src="/static/assets/en.png" alt="EN" width="24">
         </a>
         <a href="?lang=ar" aria-label="العربية">
-          <img src="{{ url_for('static', filename='assets/ar.png') }}" alt="AR" width="24">
+          <img src="/static/assets/ar.png" alt="AR" width="24">
         </a>
         <a href="?lang=ja" aria-label="日本語">
-          <img src="{{ url_for('static', filename='assets/ja.png') }}" alt="JA" width="24">
+          <img src="/static/assets/ja.png" alt="JA" width="24">
         </a>
       </div>
 
@@ -82,36 +89,36 @@
   <section id="home" class="hero">
     <div class="hero-container">
       <div class="hero-content" data-aos="fade-right">
-        <h1>{{ texts['personal_name'] }}</h1>
+        <h1>Amira Haouet</h1>
         <div class="typewriter"><span class="typewriter-text"></span></div>
-        <p class="hero-description">{{ texts['personal_title'] }}</p>
+        <p class="hero-description">AI Software Engineer et Ingénieure Full-Stack</p>
         <div class="hero-buttons">
-          <a href="#contact" class="btn btn-primary">{{ texts['btn_contact'] }}</a>
-          <a href="{{ url_for('static', filename='assets/CvAmiraHAOUET_SP.pdf') }}" download
-            class="btn btn-secondary">{{ texts['btn_download'] }}</a>
+          <a href="#contact" class="btn btn-primary">Me contacter</a>
+          <a href="/static/assets/CvAmiraHAOUET_SP.pdf" download
+            class="btn btn-secondary">Télécharger CV</a>
         </div>
 
         <!-- RDFa schema.org pour l'indexation sémantique -->
         <div vocab="https://schema.org/" typeof="Person">
-          <span property="name">{{ texts['personal_name'] }}</span><br>
-          <span property="jobTitle">{{ texts['personal_title'] }}</span><br>
-          <a href="mailto:{{ texts['personal_email'] }}" property="schema:email">{{ texts['personal_email'] }}</a>
+          <span property="name">Amira Haouet</span><br>
+          <span property="jobTitle">AI Software Engineer et Ingénieure Full-Stack</span><br>
+          <a href="mailto:haouetamira@gmail.com" property="schema:email">haouetamira@gmail.com</a>
         </div>
         <!-- FOAF RDFa complémentaire -->
         <div vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
-          <span property="foaf:name">{{ texts['personal_name'] }}</span><br>
-          <span property="foaf:title">{{ texts['personal_title'] }}</span><br>
-          <a href="mailto:{{ texts['personal_email'] }}" property="foaf:mbox">{{ texts['personal_email'] }}</a>
+          <span property="foaf:name">Amira Haouet</span><br>
+          <span property="foaf:title">AI Software Engineer et Ingénieure Full-Stack</span><br>
+          <a href="mailto:haouetamira@gmail.com" property="foaf:mbox">haouetamira@gmail.com</a>
         </div>
 
         <div class="social-links">
-          <a href="{{ texts['social_linkedin'] }}" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a href="mailto:{{ texts['personal_email'] }}"><i class="fas fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/amira-haouet/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:haouetamira@gmail.com"><i class="fas fa-envelope"></i></a>
         </div>
       </div>
       <div class="hero-image" data-aos="fade-left">
         <div class="image-wrapper">
-          <img src="{{ url_for('static', filename='assets/profile.jpg') }}" alt="{{ texts['personal_name'] }}">
+          <img src="/static/assets/profile.jpg" alt="Amira Haouet">
         </div>
       </div>
     </div>
@@ -122,12 +129,12 @@
   <section id="about" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>{{ texts['education_title'] }}</h2>
-        <p class="section-subtitle">{{ texts['subtitle_about'] }}</p>
+        <h2>Formation</h2>
+        <p class="section-subtitle">Ingénieure Informatique et AI Enthusiast</p>
       </div>
       <div class="about-content">
-        <p>{{ texts['education_sorbonne'] }}</p>
-        <p>{{ texts['education_upjv'] }}</p>
+        <p>Ingénierie Informatique – Sorbonne Paris Nord (2023–2026)</p>
+        <p>Licence Informatique – UPJV (2022–2023)</p>
       </div>
     </div>
   </section>
@@ -136,11 +143,11 @@
   <section id="skills" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>{{ texts['skills_title'] }}</h2>
-        <p class="section-subtitle">{{ texts['subtitle_skills'] }}</p>
+        <h2>Compétences Techniques</h2>
+        <p class="section-subtitle">Techniques et Outils</p>
       </div>
       <div class="skills-grid">
-        <p>{{ texts['skills_list'] }}</p>
+        <p>Python, C#, Java, SQL, XML, RDF, SPARQL</p>
       </div>
     </div>
   </section>
@@ -149,12 +156,12 @@
   <section id="experience" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>{{ texts['experience_title'] }}</h2>
-        <p class="section-subtitle">{{ texts['subtitle_experience'] }}</p>
+        <h2>Expérience</h2>
+        <p class="section-subtitle">Parcours professionnel</p>
       </div>
       <ul class="experience-list">
-        <li>{{ texts['exp_holydis_ai'] }}</li>
-        <li>{{ texts['exp_holydis_fs'] }}</li>
+        <li>AI Software Engineer – Holy-Dis (juil. 2024 – aujourd’hui)</li>
+        <li>Ingénieure Full-Stack – Holy-Dis (sept. 2023 – aujourd’hui)</li>
       </ul>
     </div>
   </section>
@@ -163,12 +170,12 @@
   <section id="education" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>{{ texts['education_title'] }}</h2>
-        <p class="section-subtitle">{{ texts['subtitle_education'] }}</p>
+        <h2>Formation</h2>
+        <p class="section-subtitle">Parcours académique</p>
       </div>
       <ul class="education-list">
-        <li>{{ texts['education_sorbonne'] }}</li>
-        <li>{{ texts['education_upjv'] }}</li>
+        <li>Ingénierie Informatique – Sorbonne Paris Nord (2023–2026)</li>
+        <li>Licence Informatique – UPJV (2022–2023)</li>
       </ul>
     </div>
   </section>
@@ -176,13 +183,13 @@
   <!-- Section TPs de WS (exemple) -->
   <section id="ws" class="section" data-aos="fade-up">
     <div class="container">
-      <h2>{{ texts['tp_ws_title'] }}</h2>
+      <h2>TPs Web Sémantique</h2>
       <ul>
-        <li>{{ texts['tp_ws_dtd'] }}</li>
-        <li>{{ texts['tp_ws_xsd'] }}</li>
-        <li>{{ texts['tp_ws_xslt'] }}</li>
-        <li>{{ texts['tp_ws_rdf'] }}</li>
-        <li>{{ texts['tp_ws_rdfa'] }}</li>
+        <li>Définition d’une DTD pour contenu multilingue (XML + DTD)</li>
+        <li>Validation avec un schéma XSD personnalisé</li>
+        <li>Transformation XML en HTML5 avec XSLT</li>
+        <li>Modélisation RDF / RDFS pour enrichir les métadonnées</li>
+        <li>Annotation RDFa sur le HTML pour SEO et accessibilité</li>
       </ul>
     </div>
   </section>
@@ -190,9 +197,11 @@
   <!-- Section Vidéo -->
   <section id="video" class="section" data-aos="fade-up">
     <div class="container">
-      <h2>{{ texts['video_title'] }}</h2>
+      <h2></h2>
       <div class="video-wrapper">
-        {{ texts['video_iframe']|safe }}
+        
+    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen></iframe>
+  
       </div>
     </div>
   </section>
@@ -201,17 +210,17 @@
   <section id="contact" class="section" data-aos="fade-up">
     <div class="container">
       <div class="section-header">
-        <h2>{{ texts['nav_contact'] }}</h2>
-        <p class="section-subtitle">{{ texts['subtitle_contact'] }}</p>
+        <h2>Contact</h2>
+        <p class="section-subtitle">Entrons en contact</p>
       </div>
-      <p><a href="mailto:{{ texts['personal_email'] }}">{{ texts['personal_email'] }}</a></p>
+      <p><a href="mailto:haouetamira@gmail.com">haouetamira@gmail.com</a></p>
     </div>
   </section>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>© {{ now().year }} {{ texts['personal_name'] }}. {{ texts['footer_rights'] }}</p>
+      <p>© 2025 Amira Haouet. Tous droits réservés.</p>
     </div>
   </footer>
 
@@ -219,7 +228,7 @@
 
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
-  <script src="{{ url_for('static', filename='js/portfolio.js') }}" defer></script>
+  <script src="/static/js/portfolio.js" defer></script>
 </body>
 
 </html>
