@@ -7,8 +7,9 @@ import os
 # === 0. Préparation ===
 load_dotenv()
 app = Flask(__name__, template_folder="templates", static_folder="static")
-app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'dev_secret')
+app.secret_key = os.environ.get('FLASK_SECRET_KEY', 'clé_dev_locale')
 my_token = os.environ.get("MY_SECRET_TOKEN")
+
 
 # === 1. Contexte global : injecter l'année ===
 @app.context_processor
