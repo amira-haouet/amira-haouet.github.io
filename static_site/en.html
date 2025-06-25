@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en"
+  prefix="dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ schema: https://schema.org/">
+
+<head>
+  
+  <link rel="alternate" href="fr.html" hreflang="fr" />
+  
+  <link rel="alternate" href="en.html" hreflang="en" />
+  
+  <link rel="alternate" href="ar.html" hreflang="ar" />
+  
+  <link rel="alternate" href="ja.html" hreflang="ja" />
+  
+  <meta charset="UTF-16">
+  <!-- Métadonnées RDFa Dublin Core -->
+  <meta property="dc:creator" content="Amira Haouet">
+  <meta property="dc:language" content="en">
+  <meta property="dc:title" content="AI Software Engineer et Full-Stack Developer">
+  <link rel="alternate" href="en.html" hreflang="en" />
+  <link rel="alternate" href="ar.html" hreflang="ar" />
+  <link rel="alternate" href="ja.html" hreflang="ja" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Titre et meta dynamiques -->
+  <title>Amira Haouet – AI Software Engineer et Full-Stack Developer</title>
+  <meta name="description" content="Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer.
+    Passionate about AI, semantic web and research.">
+  <meta name="keywords" content="Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio">
+  <meta name="author" content="Amira Haouet">
+  <meta property="rdfa:usesVocabulary" content="https://schema.org/" />
+  <meta property="rdfa:usesVocabulary" content="http://xmlns.com/foaf/0.1/" />
+
+  <link rel="author" href="https://www.linkedin.com/in/amira-haouet/">
+
+  <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+
+<body lang="en" >
+
+  <!-- Splash et particules -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text">Loading portfolio...</div>
+  </div>
+  <div class="particles" id="particles"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo" data-aos="fade-down">
+        <span>Amira Haouet</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
+        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
+        <li class="nav-item"><a href="#contact" class="nav-link nav-cta">Contact</a></li>
+      </ul>
+
+
+
+      <div class="language-selector-nav">
+        <a href="?lang=fr" aria-label="Français">
+          <img src="/static/assets/fr.png" alt="FR" width="24">
+        </a>
+        <a href="?lang=en" aria-label="English">
+          <img src="/static/assets/en.png" alt="EN" width="24">
+        </a>
+        <a href="?lang=ar" aria-label="العربية">
+          <img src="/static/assets/ar.png" alt="AR" width="24">
+        </a>
+        <a href="?lang=ja" aria-label="日本語">
+          <img src="/static/assets/ja.png" alt="JA" width="24">
+        </a>
+      </div>
+
+      <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
+    </div>
+  </nav>
+
+
+  <!-- Section Home -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content" data-aos="fade-right">
+        <h1>Amira Haouet</h1>
+        <div class="typewriter"><span class="typewriter-text"></span></div>
+        <p class="hero-description">AI Software Engineer et Full-Stack Developer</p>
+        <div class="hero-buttons">
+          <a href="#contact" class="btn btn-primary">Contact me</a>
+          <a href="/static/assets/CvAmiraHAOUET_SP.pdf" download
+            class="btn btn-secondary">Download CV</a>
+        </div>
+
+        <!-- RDFa schema.org pour l'indexation sémantique -->
+        <div vocab="https://schema.org/" typeof="Person">
+          <span property="name">Amira Haouet</span><br>
+          <span property="jobTitle">AI Software Engineer et Full-Stack Developer</span><br>
+          <a href="mailto:haouetamira@gmail.com" property="schema:email">haouetamira@gmail.com</a>
+        </div>
+        <!-- FOAF RDFa complémentaire -->
+        <div vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
+          <span property="foaf:name">Amira Haouet</span><br>
+          <span property="foaf:title">AI Software Engineer et Full-Stack Developer</span><br>
+          <a href="mailto:haouetamira@gmail.com" property="foaf:mbox">haouetamira@gmail.com</a>
+        </div>
+
+        <div class="social-links">
+          <a href="https://www.linkedin.com/in/amira-haouet/" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <a href="mailto:haouetamira@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+      </div>
+      <div class="hero-image" data-aos="fade-left">
+        <div class="image-wrapper">
+          <img src="/static/assets/profile.jpg" alt="Amira Haouet">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Section About -->
+  <section id="about" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>Education</h2>
+        <p class="section-subtitle">Computer Engineer and AI Enthusiast</p>
+      </div>
+      <div class="about-content">
+        <p>Computer Engineering – Sorbonne Paris Nord (2023–2026)</p>
+        <p>B.Sc. Computer Science – UPJV (2022–2023)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Skills -->
+  <section id="skills" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>Technical Skills</h2>
+        <p class="section-subtitle">Toolset and Technologies</p>
+      </div>
+      <div class="skills-grid">
+        <p>Python, C#, Java, SQL, XML, RDF, SPARQL</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Experience -->
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>Experience</h2>
+        <p class="section-subtitle">Professional Journey</p>
+      </div>
+      <ul class="experience-list">
+        <li>AI Software Engineer – Holy-Dis (Jul 2024 – present)</li>
+        <li>Full-Stack Developer – Holy-Dis (Sep 2023 – present)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Education -->
+  <section id="education" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>Education</h2>
+        <p class="section-subtitle">Academic Background</p>
+      </div>
+      <ul class="education-list">
+        <li>Computer Engineering – Sorbonne Paris Nord (2023–2026)</li>
+        <li>B.Sc. Computer Science – UPJV (2022–2023)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section TPs de WS (exemple) -->
+  <section id="ws" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2>Semantic Web Labs</h2>
+      <ul>
+        <li>Definition of a DTD for multilingual content (XML + DTD)</li>
+        <li>Validation using a custom XSD schema</li>
+        <li>XML en HTML5 transformation using XSLT</li>
+        <li>RDF / RDFS modeling to enrich metadata</li>
+        <li>RDFa annotation on HTML for SEO and accessibility</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Section Vidéo -->
+  <section id="video" class="section" data-aos="fade-up">
+    <div class="container">
+      <h2></h2>
+      <div class="video-wrapper">
+        
+    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira’s Presentation" allowfullscreen></iframe>
+  
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p class="section-subtitle">Get in Touch</p>
+      </div>
+      <p><a href="mailto:haouetamira@gmail.com">haouetamira@gmail.com</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2025 Amira Haouet. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Haut de page"><i class="fas fa-chevron-up"></i></button>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js" defer></script>
+  <script src="/static/js/portfolio.js" defer></script>
+</body>
+
+</html>

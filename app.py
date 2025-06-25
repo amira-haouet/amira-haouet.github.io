@@ -121,3 +121,8 @@ if __name__ == '__main__':
     test_missing_translations()
     generate_static_pages()
     app.run(debug=True)
+from dotenv import load_dotenv
+load_dotenv()
+
+import os
+my_token = os.environ.get("MY_SECRET_TOKEN")
