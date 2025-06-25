@@ -37,7 +37,7 @@ def pick_language():
     session['lang'] = detect_lang()
 
 # === 4. Chargement XML et DTD dynamique ===
-def load_translations(xml_path="data/portfolio.xml", dtd_path="data/portfolio.dtd"):
+def load_translations(xml_path="static/portfolio.xml", dtd_path="static/portfolio.dtd"):
     try:
         dtd = etree.DTD(dtd_path)
         xml_doc = etree.parse(xml_path)
@@ -79,8 +79,9 @@ def index():
 # === 6. Transformation XML/XSLT côté serveur ===
 @app.route('/xml-version')
 def xml_transformed():
-    xml_path = os.path.join('data', 'portfolio.xml')
-    xsl_path = os.path.join('data', 'portfolio.xsl')
+    xml_path = os.path.join('static', 'portfolio.xml')
+    xsl_path = os.path.join('static', 'portfolio.xsl')
+
     try:
         dom = etree.parse(xml_path)
         xslt = etree.parse(xsl_path)
