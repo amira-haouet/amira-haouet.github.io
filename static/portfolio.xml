@@ -119,6 +119,14 @@
   <content lang="ja">フルスタック開発</content>
 </block>
 
+<block id="page_title">
+  <content lang="fr">Amira Haouet – AI Software Engineer et Ingénieure Full-Stack</content>
+  <content lang="en">Amira Haouet – AI Software Engineer and Full-Stack Developer</content>
+  <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي ومطورة كاملة</content>
+  <content lang="ja">アミラ・ハウエット – AIソフトウェアエンジニアおよびフルスタック開発者</content>
+</block>
+
+
 <block id="interest_python">
   <content lang="fr">Python</content>
   <content lang="en">Python</content>

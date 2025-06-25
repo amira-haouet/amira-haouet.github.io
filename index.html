@@ -20,7 +20,7 @@
   <meta property="dc:date" content="2025">
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amira Haouet – AI Software Engineer et Ingénieure Full-Stack</title>
+  <title data-block="page_title"></title>
   <meta name="description"
     content="Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l'IA, le web sémantique et la recherche.">
   <meta name="keywords" content="Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio">
@@ -35,11 +35,11 @@
 <body lang="fr" vocab="http://xmlns.com/foaf/0.1/" typeof="foaf:Person">
 
   <!-- Splash et particules -->
-<!-- Splash et particules -->
-<div class="loading-screen" id="loadingScreen">
-  <div class="loading-spinner"></div>
-  <div class="loading-text" data-block="loading_text"></div>
-</div>
+  <!-- Splash et particules -->
+  <div class="loading-screen" id="loadingScreen">
+    <div class="loading-spinner"></div>
+    <div class="loading-text" data-block="loading_text"></div>
+  </div>
   <div class="particles" id="particles"></div>
 
   <!-- Navbar -->
@@ -177,32 +177,32 @@
     </div>
   </section>
 
-<section id="experience" class="section" data-aos="fade-up">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-block="experience_title"></h2>
-      <p class="section-subtitle" data-block="subtitle_experience"></p>
-    </div>
-
-    <div class="experience-list">
-      <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
-        <h3 data-block="exp_holydis_ai"></h3>
-        <p class="period">Juillet 2024 – Présent</p>
-        <div property="foaf:currentProject" typeof="foaf:Project">
-          <p property="foaf:name" data-block="current_project_ai"></p>
-        </div>
+  <section id="experience" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-block="experience_title"></h2>
+        <p class="section-subtitle" data-block="subtitle_experience"></p>
       </div>
 
-      <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
-        <h3 data-block="exp_holydis_fs"></h3>
-        <p class="period">Septembre 2023 – Juillet 2024</p>
-        <div property="foaf:currentProject" typeof="foaf:Project">
-          <p property="foaf:name">Développement d'applications web complètes</p>
+      <div class="experience-list">
+        <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
+          <h3 data-block="exp_holydis_ai"></h3>
+          <p class="period">Juillet 2024 – Présent</p>
+          <div property="foaf:currentProject" typeof="foaf:Project">
+            <p property="foaf:name" data-block="current_project_ai"></p>
+          </div>
+        </div>
+
+        <div property="foaf:workplaceHomepage" typeof="foaf:Organization">
+          <h3 data-block="exp_holydis_fs"></h3>
+          <p class="period">Septembre 2023 – Juillet 2024</p>
+          <div property="foaf:currentProject" typeof="foaf:Project">
+            <p property="foaf:name">Développement d'applications web complètes</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
   <!-- Section Education -->
@@ -258,47 +258,47 @@
   </section>
 
 
-<!-- Section Contact -->
-<section id="contact" class="section" data-aos="fade-up">
-  <div class="container">
-    <div class="section-header">
-      <h2 data-block="nav_contact"></h2>
-      <p class="section-subtitle" data-block="subtitle_contact"></p>
-    </div>
+  <!-- Section Contact -->
+  <section id="contact" class="section" data-aos="fade-up">
+    <div class="container">
+      <div class="section-header">
+        <h2 data-block="nav_contact"></h2>
+        <p class="section-subtitle" data-block="subtitle_contact"></p>
+      </div>
 
-    <div class="contact-info">
-      <p>
-        Email :
-        <a href="mailto:haouetamira@gmail.com" property="foaf:mbox" data-block="personal_email"></a>
-      </p>
-      <p>
-        LinkedIn :
-        <a href="https://www.linkedin.com/in/amira-haouet/" property="foaf:homepage" target="_blank"
-           data-block="account_linkedin_url"></a>
-      </p>
+      <div class="contact-info">
+        <p>
+          Email :
+          <a href="mailto:haouetamira@gmail.com" property="foaf:mbox" data-block="personal_email"></a>
+        </p>
+        <p>
+          LinkedIn :
+          <a href="https://www.linkedin.com/in/amira-haouet/" property="foaf:homepage" target="_blank"
+            data-block="account_linkedin_url"></a>
+        </p>
 
-      <!-- Informations de contact supplémentaires cachées -->
-      <div style="display: none;">
-        <span property="foaf:based_near" typeof="foaf:Organization">
-          <span property="foaf:name" data-block="personal_location"></span>
-        </span>
+        <!-- Informations de contact supplémentaires cachées -->
+        <div style="display: none;">
+          <span property="foaf:based_near" typeof="foaf:Organization">
+            <span property="foaf:name" data-block="personal_location"></span>
+          </span>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <p>
-      © <span data-block="footer_year"></span>
-      <span property="foaf:name" data-block="personal_name"></span>.
-      <span data-block="footer_rights"></span>
-    </p>
-    <p property="foaf:made" data-block="footer_made"></p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span data-block="footer_year"></span>
+        <span property="foaf:name" data-block="personal_name"></span>.
+        <span data-block="footer_rights"></span>
+      </p>
+      <p property="foaf:made" data-block="footer_made"></p>
+    </div>
+  </footer>
 
 
   <button class="scroll-to-top" id="scrollToTop" aria-label="Haut de page">
