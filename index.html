@@ -324,7 +324,7 @@
 (async function () {
   const availableLangs = ['fr', 'en', 'ar', 'ja'];
   const defaultLang = 'fr';
-  const xmlPath = '/static/data/portfolio.xml'; // <-- adapte ce chemin si nécessaire
+  const xmlPath = '/static/portfolio.xml'; 
 
   function getLang() {
     const urlParam = new URLSearchParams(window.location.search).get("lang");
