@@ -36,7 +36,7 @@ def detect_lang():
 def pick_language():
     session['lang'] = detect_lang()
 
-# === 4. Chargement XML et DTD dynamique ===
+# === 4. Chargement XML et DTD dynamique (depuis static/)
 def load_translations(xml_path="static/portfolio.xml", dtd_path="static/portfolio.dtd"):
     try:
         dtd = etree.DTD(dtd_path)
@@ -81,7 +81,6 @@ def index():
 def xml_transformed():
     xml_path = os.path.join('static', 'portfolio.xml')
     xsl_path = os.path.join('static', 'portfolio.xsl')
-
     try:
         dom = etree.parse(xml_path)
         xslt = etree.parse(xsl_path)
@@ -98,8 +97,8 @@ def xml_transformed():
 def handler(request):
     return app(request.environ, start_response=lambda *args: None)
 
-# === 8. Local uniquement : tests + génération de pages statiques ===
-def generate_static_pages(output_dir="static_site"):
+# === 8. Local uniquement : génération de pages statiques
+def generate_static_pages(output_dir="static/static_site"):
     os.makedirs(output_dir, exist_ok=True)
     translations = load_translations()
     for lang in AVAILABLE_LANGS:
@@ -118,7 +117,7 @@ def generate_static_pages(output_dir="static_site"):
                 f.write(html)
             print(f"✅ {filename} généré.")
 
-def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LANGS):
+def test_missing_translations(xml_path="static/portfolio.xml", langs=AVAILABLE_LANGS):
     try:
         tree = etree.parse(xml_path)
         root = tree.getroot()
