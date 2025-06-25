@@ -337,18 +337,31 @@
 
 <block id="video_iframe">
   <content lang="fr"><![CDATA[
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=fr" title="Vidéo de présentation" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VJYJPm8XrPM" title="Vidéo multilingue – Portfolio Amira" allowfullscreen></iframe>
+    <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+      © Vidéo par <a href="https://www.youtube.com/@Shupera7meD" target="_blank">Shupera7meD</a> sur YouTube
+    </p>
   ]]></content>
   <content lang="en"><![CDATA[
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=en" title="Presentation video" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VJYJPm8XrPM" title="Multilingual Video – Amira's Portfolio" allowfullscreen></iframe>
+    <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+      © Video by <a href="https://www.youtube.com/@Shupera7meD" target="_blank">Shupera7meD</a> on YouTube
+    </p>
   ]]></content>
   <content lang="ar"><![CDATA[
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=ar" title="فيديو تعريفي" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VJYJPm8XrPM" title="فيديو متعدد اللغات – بورتفوليو أميرة" allowfullscreen></iframe>
+    <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+      © فيديو بواسطة <a href="https://www.youtube.com/@Shupera7meD" target="_blank">Shupera7meD</a> على YouTube
+    </p>
   ]]></content>
   <content lang="ja"><![CDATA[
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=ja" title="紹介ビデオ" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/VJYJPm8XrPM" title="多言語ビデオ – アミラのポートフォリオ" allowfullscreen></iframe>
+    <p style="text-align: center; font-size: 0.9em; margin-top: 10px;">
+      © YouTubeの <a href="https://www.youtube.com/@Shupera7meD" target="_blank">Shupera7meD</a> による動画
+    </p>
   ]]></content>
 </block>
+
 
 
 <!-- Navigation -->
