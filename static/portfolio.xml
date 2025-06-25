@@ -3,24 +3,163 @@
 
 <portfolio>
 
-<!-- Informations personnelles -->
+<!-- Informations personnelles FOAF -->
 <block id="personal_name">
   <content lang="fr">Amira Haouet</content>
   <content lang="en">Amira Haouet</content>
   <content lang="ar">أميرة حوات</content>
   <content lang="ja">アミラ・ハウエット</content>
 </block>
+
+<block id="personal_given_name">
+  <content lang="fr">Amira</content>
+  <content lang="en">Amira</content>
+  <content lang="ar">أميرة</content>
+  <content lang="ja">アミラ</content>
+</block>
+
+<block id="personal_family_name">
+  <content lang="fr">Haouet</content>
+  <content lang="en">Haouet</content>
+  <content lang="ar">حوات</content>
+  <content lang="ja">ハウエット</content>
+</block>
+
 <block id="personal_title">
   <content lang="fr">AI Software Engineer et Ingénieure Full-Stack</content>
-  <content lang="en">AI Software Engineer et Full-Stack Developer</content>
+  <content lang="en">AI Software Engineer and Full-Stack Developer</content>
   <content lang="ar">مهندسة برمجيات ذكاء اصطناعي ومطورة كاملة</content>
   <content lang="ja">AIソフトウェアエンジニアおよびフルスタック開発者</content>
 </block>
+
 <block id="personal_email">
   <content lang="fr">haouetamira@gmail.com</content>
   <content lang="en">haouetamira@gmail.com</content>
   <content lang="ar">haouetamira@gmail.com</content>
   <content lang="ja">haouetamira@gmail.com</content>
+</block>
+
+<block id="personal_gender">
+  <content lang="fr">female</content>
+  <content lang="en">female</content>
+  <content lang="ar">female</content>
+  <content lang="ja">female</content>
+</block>
+
+<block id="personal_location">
+  <content lang="fr">Paris, France</content>
+  <content lang="en">Paris, France</content>
+  <content lang="ar">باريس، فرنسا</content>
+  <content lang="ja">パリ、フランス</content>
+</block>
+
+<block id="personal_description">
+  <content lang="fr">Ingénieure passionnée par l'IA, le web sémantique et le développement full-stack</content>
+  <content lang="en">Engineer passionate about AI, semantic web and full-stack development</content>
+  <content lang="ar">مهندسة شغوفة بالذكاء الاصطناعي والويب الدلالي والتطوير الكامل</content>
+  <content lang="ja">AI、セマンティックウェブ、フルスタック開発に情熱を注ぐエンジニア</content>
+</block>
+
+<!-- Organisations/Entreprises -->
+<block id="org_holydis">
+  <content lang="fr">Holy-Dis</content>
+  <content lang="en">Holy-Dis</content>
+  <content lang="ar">Holy-Dis</content>
+  <content lang="ja">Holy-Dis</content>
+</block>
+
+<block id="org_sorbonne">
+  <content lang="fr">Sorbonne Paris Nord</content>
+  <content lang="en">Sorbonne Paris Nord</content>
+  <content lang="ar">سوربون باريس نورد</content>
+  <content lang="ja">ソルボンヌ・パリ・ノール</content>
+</block>
+
+<block id="org_upjv">
+  <content lang="fr">UPJV (Université de Picardie Jules Verne)</content>
+  <content lang="en">UPJV (University of Picardie Jules Verne)</content>
+  <content lang="ar">UPJV (جامعة بيكاردي جول فيرن)</content>
+  <content lang="ja">UPJV（ピカルディ・ジュール・ヴェルヌ大学）</content>
+</block>
+
+<!-- Projets actuels -->
+<block id="current_project_ai">
+  <content lang="fr">Développement de solutions d'intelligence artificielle</content>
+  <content lang="en">Development of artificial intelligence solutions</content>
+  <content lang="ar">تطوير حلول الذكاء الاصطناعي</content>
+  <content lang="ja">人工知能ソリューションの開発</content>
+</block>
+
+<block id="current_project_ws">
+  <content lang="fr">Travaux Pratiques en Technologies Sémantiques</content>
+  <content lang="en">Practical Work in Semantic Technologies</content>
+  <content lang="ar">أعمال عملية في التقنيات الدلالية</content>
+  <content lang="ja">セマンティック技術の実践的作業</content>
+</block>
+
+<!-- Centres d'intérêt/Compétences -->
+<block id="interest_ai">
+  <content lang="fr">Intelligence Artificielle</content>
+  <content lang="en">Artificial Intelligence</content>
+  <content lang="ar">الذكاء الاصطناعي</content>
+  <content lang="ja">人工知能</content>
+</block>
+
+<block id="interest_semantic_web">
+  <content lang="fr">Web Sémantique</content>
+  <content lang="en">Semantic Web</content>
+  <content lang="ar">الويب الدلالي</content>
+  <content lang="ja">セマンティックウェブ</content>
+</block>
+
+<block id="interest_fullstack">
+  <content lang="fr">Développement Full-Stack</content>
+  <content lang="en">Full-Stack Development</content>
+  <content lang="ar">التطوير الكامل</content>
+  <content lang="ja">フルスタック開発</content>
+</block>
+
+<block id="interest_python">
+  <content lang="fr">Python</content>
+  <content lang="en">Python</content>
+  <content lang="ar">بايثون</content>
+  <content lang="ja">Python</content>
+</block>
+
+<block id="interest_csharp">
+  <content lang="fr">C#</content>
+  <content lang="en">C#</content>
+  <content lang="ar">C#</content>
+  <content lang="ja">C#</content>
+</block>
+
+<block id="interest_rdf">
+  <content lang="fr">RDF</content>
+  <content lang="en">RDF</content>
+  <content lang="ar">RDF</content>
+  <content lang="ja">RDF</content>
+</block>
+
+<block id="interest_sparql">
+  <content lang="fr">SPARQL</content>
+  <content lang="en">SPARQL</content>
+  <content lang="ar">SPARQL</content>
+  <content lang="ja">SPARQL</content>
+</block>
+
+<!-- Comptes en ligne -->
+<block id="account_linkedin_name">
+  <content lang="fr">amira-haouet</content>
+  <content lang="en">amira-haouet</content>
+  <content lang="ar">amira-haouet</content>
+  <content lang="ja">amira-haouet</content>
+</block>
+
+<block id="account_linkedin_url">
+  <content lang="fr">https://www.linkedin.com/in/amira-haouet/</content>
+  <content lang="en">https://www.linkedin.com/in/amira-haouet/</content>
+  <content lang="ar">https://www.linkedin.com/in/amira-haouet/</content>
+  <content lang="ja">https://www.linkedin.com/in/amira-haouet/</content>
 </block>
 
 <!-- Formation -->
@@ -30,12 +169,14 @@
   <content lang="ar">التعليم</content>
   <content lang="ja">学歴</content>
 </block>
+
 <block id="education_sorbonne">
   <content lang="fr">Ingénierie Informatique – Sorbonne Paris Nord (2023–2026)</content>
   <content lang="en">Computer Engineering – Sorbonne Paris Nord (2023–2026)</content>
   <content lang="ar">هندسة الحاسوب – سوربون باريس نورد (2023–2026)</content>
   <content lang="ja">コンピューター工学 – ソルボンヌ・パリ・ノール（2023–2026）</content>
 </block>
+
 <block id="education_upjv">
   <content lang="fr">Licence Informatique – UPJV (2022–2023)</content>
   <content lang="en">B.Sc. Computer Science – UPJV (2022–2023)</content>
@@ -50,6 +191,7 @@
   <content lang="ar">المهارات التقنية</content>
   <content lang="ja">技術スキル</content>
 </block>
+
 <block id="skills_list">
   <content lang="fr">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
   <content lang="en">Python, C#, Java, SQL, XML, RDF, SPARQL</content>
@@ -64,51 +206,57 @@
   <content lang="ar">الخبرة</content>
   <content lang="ja">職務経験</content>
 </block>
+
 <block id="exp_holydis_ai">
-  <content lang="fr">AI Software Engineer – Holy-Dis (juil. 2024 – aujourd’hui)</content>
+  <content lang="fr">AI Software Engineer – Holy-Dis (juil. 2024 – aujourd'hui)</content>
   <content lang="en">AI Software Engineer – Holy-Dis (Jul 2024 – present)</content>
   <content lang="ar">مهندسة برمجيات ذكاء اصطناعي – Holy-Dis (يوليو 2024 – الآن)</content>
   <content lang="ja">AIソフトウェアエンジニア – Holy-Dis（2024年7月〜現在）</content>
 </block>
+
 <block id="exp_holydis_fs">
-  <content lang="fr">Ingénieure Full-Stack – Holy-Dis (sept. 2023 – aujourd’hui)</content>
-  <content lang="en">Full-Stack Developer – Holy-Dis (Sep 2023 – present)</content>
-  <content lang="ar">مطورة كاملة – Holy-Dis (سبتمبر 2023 – الآن)</content>
-  <content lang="ja">フルスタック開発者 – Holy-Dis（2023年9月〜現在）</content>
+  <content lang="fr">Ingénieure Full-Stack – Holy-Dis (sept. 2023 – juil. 2024)</content>
+  <content lang="en">Full-Stack Developer – Holy-Dis (Sep 2023 – Jul 2024)</content>
+  <content lang="ar">مطورة كاملة – Holy-Dis (سبتمبر 2023 – يوليو 2024)</content>
+  <content lang="ja">フルスタック開発者 – Holy-Dis（2023年9月〜2024年7月）</content>
 </block>
 
-
-<!--   TPs de Web Sémantique -->
+<!-- TPs de Web Sémantique -->
 <block id="tp_ws_title">
   <content lang="fr">TPs Web Sémantique</content>
   <content lang="en">Semantic Web Labs</content>
   <content lang="ar">تمارين الويب الدلالي</content>
   <content lang="ja">セマンティックウェブの演習</content>
 </block>
+
 <block id="tp_ws_dtd">
-  <content lang="fr">Définition d’une DTD pour contenu multilingue (XML + DTD)</content>
+  <content lang="fr">Définition d'une DTD pour contenu multilingue (XML + DTD)</content>
   <content lang="en">Definition of a DTD for multilingual content (XML + DTD)</content>
   <content lang="ar">تعريف DTD للمحتوى متعدد اللغات (XML + DTD)</content>
   <content lang="ja">多言語コンテンツのためのDTDの定義（XML + DTD）</content>
 </block>
+
 <block id="tp_ws_xsd">
   <content lang="fr">Validation avec un schéma XSD personnalisé</content>
   <content lang="en">Validation using a custom XSD schema</content>
   <content lang="ar">التحقق باستخدام مخطط XSD مخصص</content>
   <content lang="ja">カスタムXSDスキーマによる検証</content>
 </block>
+
 <block id="tp_ws_xslt">
   <content lang="fr">Transformation XML en HTML5 avec XSLT</content>
-  <content lang="en">XML en HTML5 transformation using XSLT</content>
+  <content lang="en">XML to HTML5 transformation using XSLT</content>
   <content lang="ar">تحويل XML إلى HTML5 بواسطة XSLT</content>
   <content lang="ja">XSLTを使用したXMLからHTML5への変換</content>
 </block>
+
 <block id="tp_ws_rdf">
   <content lang="fr">Modélisation RDF / RDFS pour enrichir les métadonnées</content>
   <content lang="en">RDF / RDFS modeling to enrich metadata</content>
   <content lang="ar">نمذجة RDF / RDFS لإثراء البيانات الوصفية</content>
   <content lang="ja">メタデータを強化するためのRDF / RDFSモデリング</content>
 </block>
+
 <block id="tp_ws_rdfa">
   <content lang="fr">Annotation RDFa sur le HTML pour SEO et accessibilité</content>
   <content lang="en">RDFa annotation on HTML for SEO and accessibility</content>
@@ -116,13 +264,20 @@
   <content lang="ja">SEOとアクセシビリティのためのHTMLへのRDFa注釈</content>
 </block>
 
-<!-- Vidéo multilingue -->
+<!-- Reste du contenu existant... -->
+<block id="video_title">
+  <content lang="fr">Présentation Vidéo</content>
+  <content lang="en">Video Presentation</content>
+  <content lang="ar">عرض فيديو</content>
+  <content lang="ja">ビデオプレゼンテーション</content>
+</block>
+
 <block id="video_iframe">
   <content lang="fr"><![CDATA[
     <iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen></iframe>
   ]]></content>
   <content lang="en"><![CDATA[
-    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira’s Presentation" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira's Presentation" allowfullscreen></iframe>
   ]]></content>
   <content lang="ar"><![CDATA[
     <iframe src="https://www.youtube.com/embed/TALE_ID?hl=ar" title="عرض أميرة" allowfullscreen></iframe>
@@ -132,37 +287,42 @@
   ]]></content>
 </block>
 
-<!-- Menu de navigation -->
+<!-- Navigation -->
 <block id="nav_home">
   <content lang="fr">Accueil</content>
   <content lang="en">Home</content>
   <content lang="ar">الرئيسية</content>
   <content lang="ja">ホーム</content>
 </block>
+
 <block id="nav_about">
   <content lang="fr">À propos</content>
   <content lang="en">About</content>
   <content lang="ar">حول</content>
   <content lang="ja">自己紹介</content>
 </block>
+
 <block id="nav_skills">
   <content lang="fr">Compétences</content>
   <content lang="en">Skills</content>
   <content lang="ar">مهارات</content>
   <content lang="ja">スキル</content>
 </block>
+
 <block id="nav_experience">
   <content lang="fr">Expérience</content>
   <content lang="en">Experience</content>
   <content lang="ar">الخبرة</content>
   <content lang="ja">経験</content>
 </block>
+
 <block id="nav_education">
   <content lang="fr">Formation</content>
   <content lang="en">Education</content>
   <content lang="ar">التعليم</content>
   <content lang="ja">学歴</content>
 </block>
+
 <block id="nav_contact">
   <content lang="fr">Contact</content>
   <content lang="en">Contact</content>
@@ -170,43 +330,49 @@
   <content lang="ja">連絡先</content>
 </block>
 
-<!-- Section subtitles -->
+<!-- Sous-titres de section -->
 <block id="subtitle_about">
   <content lang="fr">Ingénieure Informatique et AI Enthusiast</content>
   <content lang="en">Computer Engineer and AI Enthusiast</content>
   <content lang="ar">مهندسة حاسوب وعاشقة الذكاء الاصطناعي</content>
   <content lang="ja">コンピューターエンジニアおよびAI愛好家</content>
 </block>
+
 <block id="subtitle_skills">
-  <content lang="fr">Techniques et Outils</content>
-  <content lang="en">Toolset and Technologies</content>
-  <content lang="ar">الأدوات والتقنيات</content>
+  <content lang="fr">Technologies et Outils</content>
+  <content lang="en">Technologies and Tools</content>
+  <content lang="ar">التقنيات والأدوات</content>
   <content lang="ja">技術とツール</content>
 </block>
+
 <block id="subtitle_experience">
   <content lang="fr">Parcours professionnel</content>
   <content lang="en">Professional Journey</content>
   <content lang="ar">المسار المهني</content>
   <content lang="ja">職歴</content>
 </block>
+
 <block id="subtitle_education">
   <content lang="fr">Parcours académique</content>
   <content lang="en">Academic Background</content>
   <content lang="ar">الخلفية الأكاديمية</content>
   <content lang="ja">学歴</content>
 </block>
+
 <block id="subtitle_contact">
   <content lang="fr">Entrons en contact</content>
   <content lang="en">Get in Touch</content>
   <content lang="ar">تواصل معنا</content>
   <content lang="ja">ご連絡ください</content>
 </block>
+
 <block id="footer_year">
   <content lang="fr">2025</content>
   <content lang="en">2025</content>
   <content lang="ar">2025</content>
   <content lang="ja">2025年</content>
 </block>
+
 <block id="footer_rights">
   <content lang="fr">Tous droits réservés.</content>
   <content lang="en">All rights reserved.</content>
@@ -214,16 +380,21 @@
   <content lang="ja">全著作権所有。</content>
 </block>
 
-<!-- Meta SEO -->
+<block id="footer_made">
+  <content lang="fr">Portfolio développé avec les technologies du web sémantique</content>
+  <content lang="en">Portfolio developed with semantic web technologies</content>
+  <content lang="ar">محفظة مطورة بتقنيات الويب الدلالي</content>
+  <content lang="ja">セマンティックウェブ技術で開発されたポートフォリオ</content>
+</block>
+
+<!-- Métadonnées SEO -->
 <block id="meta_description">
-  <content lang="fr">Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack.
-    Passionnée par l’IA, le web sémantique et la recherche.</content>
-  <content lang="en">Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer.
-    Passionate about AI, semantic web and research.</content>
-  <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي في Holy-Dis، مطورة كاملة. شغوفة
-    بالذكاء الاصطناعي والويب الدلالي والبحث.</content>
+  <content lang="fr">Amira Haouet – AI Software Engineer chez Holy-Dis, Ingénieure Full-Stack. Passionnée par l'IA, le web sémantique et la recherche.</content>
+  <content lang="en">Amira Haouet – AI Software Engineer at Holy-Dis, Full-Stack Developer. Passionate about AI, semantic web and research.</content>
+  <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي في Holy-Dis، مطورة كاملة. شغوفة بالذكاء الاصطناعي والويب الدلالي والبحث.</content>
   <content lang="ja">アミラ・ハウエット – Holy-DisのAIソフトウェアエンジニア、フルスタック開発者。AI、セマンティックウェブ、研究に情熱を注ぐ。</content>
 </block>
+
 <block id="meta_keywords">
   <content lang="fr">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>
   <content lang="en">Amira Haouet, AI, Full-Stack, Python, C#, JavaScript, Portfolio</content>
@@ -231,7 +402,7 @@
   <content lang="ja">アミラ・ハウエット、AI、フルスタック、Python、C#、JavaScript、ポートフォリオ</content>
 </block>
 
-<!-- Splash screen -->
+<!-- Écran de chargement -->
 <block id="loading_text">
   <content lang="fr">Chargement du portfolio...</content>
   <content lang="en">Loading portfolio...</content>
@@ -246,6 +417,7 @@
   <content lang="ar">تواصل معي</content>
   <content lang="ja">連絡する</content>
 </block>
+
 <block id="btn_download">
   <content lang="fr">Télécharger CV</content>
   <content lang="en">Download CV</content>
@@ -253,11 +425,4 @@
   <content lang="ja">履歴書をダウンロード</content>
 </block>
 
-<!-- Réseaux sociaux -->
-<block id="social_linkedin">
-  <content lang="fr">https://www.linkedin.com/in/amira-haouet/</content>
-  <content lang="en">https://www.linkedin.com/in/amira-haouet/</content>
-  <content lang="ar">https://www.linkedin.com/in/amira-haouet/</content>
-  <content lang="ja">https://www.linkedin.com/in/amira-haouet/</content>
-</block>
 </portfolio>
