@@ -13,7 +13,7 @@
   <meta property="dc:title" content="{{ texts['personal_title'] }}">
   <link rel="alternate" href="en.html" hreflang="en" />
   <link rel="alternate" href="ar.html" hreflang="ar" />
-
+  <link rel="alternate" href="ja.html" hreflang="ja" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Titre et meta dynamiques -->
@@ -55,21 +55,28 @@
         <li class="nav-item"><a href="#education" class="nav-link">{{ texts['nav_education'] }}</a></li>
         <li class="nav-item"><a href="#contact" class="nav-link nav-cta">{{ texts['nav_contact'] }}</a></li>
       </ul>
+
+
+
+      <div class="language-selector-nav">
+        <a href="?lang=fr" aria-label="Français">
+          <img src="{{ url_for('static', filename='assets/fr.png') }}" alt="FR" width="24">
+        </a>
+        <a href="?lang=en" aria-label="English">
+          <img src="{{ url_for('static', filename='assets/en.png') }}" alt="EN" width="24">
+        </a>
+        <a href="?lang=ar" aria-label="العربية">
+          <img src="{{ url_for('static', filename='assets/ar.png') }}" alt="AR" width="24">
+        </a>
+        <a href="?lang=ja" aria-label="日本語">
+          <img src="{{ url_for('static', filename='assets/ja.png') }}" alt="JA" width="24">
+        </a>
+      </div>
+
       <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
     </div>
   </nav>
-  <!-- Sélecteur de langue dans la navbar -->
-  <div class="language-selector-nav">
-    <a href="?lang=fr" aria-label="Français">
-      <img src="{{ url_for('static', filename='assets/fr.png') }}" alt="FR" width="20">
-    </a>
-    <a href="?lang=en" aria-label="English">
-      <img src="{{ url_for('static', filename='assets/en.png') }}" alt="EN" width="20">
-    </a>
-    <a href="?lang=ar" aria-label="العربية">
-      <img src="{{ url_for('static', filename='assets/ar.png') }}" alt="AR" width="20">
-    </a>
-  </div>
+
 
   <!-- Section Home -->
   <section id="home" class="hero">

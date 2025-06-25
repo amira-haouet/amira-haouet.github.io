@@ -27,7 +27,7 @@ for block in xml_doc.findall('block'):
     }
 
 # === 4. Langues supportées ===
-AVAILABLE_LANGS = ['fr', 'en', 'ar']
+AVAILABLE_LANGS = ['fr', 'en', 'ar','ja']
 DEFAULT_LANG = 'fr'
 
 def detect_lang():
