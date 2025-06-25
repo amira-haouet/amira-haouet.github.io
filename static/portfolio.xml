@@ -82,6 +82,21 @@
   <content lang="ja">UPJV（ピカルディ・ジュール・ヴェルヌ大学）</content>
 </block>
 
+<block id="contact_email_label">
+  <content lang="fr">Email :</content>
+  <content lang="en">Email:</content>
+  <content lang="ar">البريد الإلكتروني:</content>
+  <content lang="ja">メール：</content>
+</block>
+
+<block id="contact_linkedin_label">
+  <content lang="fr">LinkedIn :</content>
+  <content lang="en">LinkedIn:</content>
+  <content lang="ar">لينكدإن:</content>
+  <content lang="ja">リンクトイン：</content>
+</block>
+
+
 <!-- Projets actuels -->
 <block id="current_project_ai">
   <content lang="fr">Développement de solutions d'intelligence artificielle</content>
@@ -124,6 +139,13 @@
   <content lang="en">Amira Haouet – AI Software Engineer and Full-Stack Developer</content>
   <content lang="ar">أميرة حوات – مهندسة برمجيات ذكاء اصطناعي ومطورة كاملة</content>
   <content lang="ja">アミラ・ハウエット – AIソフトウェアエンジニアおよびフルスタック開発者</content>
+</block>
+
+<block id="skills_expert_title">
+  <content lang="fr">Domaines d'Expertise</content>
+  <content lang="en">Areas of Expertise</content>
+  <content lang="ar">مجالات الخبرة</content>
+  <content lang="ja">専門分野</content>
 </block>
 
 
@@ -184,6 +206,26 @@
   <content lang="ar">هندسة الحاسوب – سوربون باريس نورد (2023–2026)</content>
   <content lang="ja">コンピューター工学 – ソルボンヌ・パリ・ノール（2023–2026）</content>
 </block>
+<block id="period_holydis_ai">
+  <content lang="fr">Juillet 2024 – Présent</content>
+  <content lang="en">July 2024 – Present</content>
+  <content lang="ar">يوليو 2024 – الآن</content>
+  <content lang="ja">2024年7月〜現在</content>
+</block>
+
+<block id="period_holydis_fs">
+  <content lang="fr">Septembre 2023 – Juillet 2024</content>
+  <content lang="en">September 2023 – July 2024</content>
+  <content lang="ar">سبتمبر 2023 – يوليو 2024</content>
+  <content lang="ja">2023年9月〜2024年7月</content>
+</block>
+
+<block id="current_project_fs">
+  <content lang="fr">Développement d'applications web complètes</content>
+  <content lang="en">Development of full web applications</content>
+  <content lang="ar">تطوير تطبيقات ويب كاملة</content>
+  <content lang="ja">完全なWebアプリケーションの開発</content>
+</block>
 
 <block id="education_upjv">
   <content lang="fr">Licence Informatique – UPJV (2022–2023)</content>
@@ -198,6 +240,19 @@
   <content lang="en">Technical Skills</content>
   <content lang="ar">المهارات التقنية</content>
   <content lang="ja">技術スキル</content>
+</block>
+<block id="education_upjv_title">
+  <content lang="fr">Licence Informatique</content>
+  <content lang="en">B.Sc. Computer Science</content>
+  <content lang="ar">ليسانس في المعلوماتية</content>
+  <content lang="ja">情報学学士</content>
+</block>
+
+<block id="period_upjv">
+  <content lang="fr">2022 – 2023</content>
+  <content lang="en">2022 – 2023</content>
+  <content lang="ar">2022 – 2023</content>
+  <content lang="ja">2022年〜2023年</content>
 </block>
 
 <block id="skills_list">
