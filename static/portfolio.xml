@@ -337,18 +337,19 @@
 
 <block id="video_iframe">
   <content lang="fr"><![CDATA[
-    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=fr" title="Présentation Amira" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=fr" title="Vidéo de présentation" allowfullscreen></iframe>
   ]]></content>
   <content lang="en"><![CDATA[
-    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=en" title="Amira's Presentation" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=en" title="Presentation video" allowfullscreen></iframe>
   ]]></content>
   <content lang="ar"><![CDATA[
-    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=ar" title="عرض أميرة" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=ar" title="فيديو تعريفي" allowfullscreen></iframe>
   ]]></content>
   <content lang="ja"><![CDATA[
-    <iframe src="https://www.youtube.com/embed/TALE_ID?hl=ja" title="アミラの紹介" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/VJYJPm8XrPM?hl=ja" title="紹介ビデオ" allowfullscreen></iframe>
   ]]></content>
 </block>
+
 
 <!-- Navigation -->
 <block id="nav_home">
@@ -487,5 +488,6 @@
   <content lang="ar">تحميل السيرة الذاتية</content>
   <content lang="ja">履歴書をダウンロード</content>
 </block>
+
 
 </portfolio>
