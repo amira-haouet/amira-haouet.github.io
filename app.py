@@ -1,10 +1,10 @@
-from flask import Flask, request, session, render_template, url_for
-from lxml import etree
+from flask import Flask, request, session, render_template, url_for, send_file
 from datetime import datetime
+from lxml import etree
 import os
 
-app = Flask(__name__)
-app.secret_key = 'remplace_par_une_clef_secrète'
+app = Flask(__name__, template_folder="templates", static_folder="static")
+app.secret_key = 'clef_super_secrete_Amira'
 
 # === 1. Contexte global : injecter l'année ===
 @app.context_processor
@@ -27,7 +27,7 @@ for block in xml_doc.findall('block'):
     }
 
 # === 4. Langues supportées ===
-AVAILABLE_LANGS = ['fr', 'en', 'ar','ja']
+AVAILABLE_LANGS = ['fr', 'en', 'ar', 'ja']
 DEFAULT_LANG = 'fr'
 
 def detect_lang():
@@ -69,7 +69,6 @@ def index():
 # === 6. Générateur de pages statiques ===
 def generate_static_pages(output_dir="static_site"):
     os.makedirs(output_dir, exist_ok=True)
-    print("🛠 Génération des fichiers HTML statiques…")
     for lang in AVAILABLE_LANGS:
         with app.test_request_context(f"/?lang={lang}"):
             lang_code = detect_lang()
@@ -85,9 +84,8 @@ def generate_static_pages(output_dir="static_site"):
             output_path = os.path.join(output_dir, filename)
             with open(output_path, "w", encoding="UTF-8") as f:
                 f.write(html)
-            print(f"✅ {filename} généré.")
 
-# === 7. Vérification des traductions ===
+# === 7. Vérification des traductions manquantes ===
 def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LANGS):
     tree = etree.parse(xml_path)
     root = tree.getroot()
@@ -98,8 +96,28 @@ def test_missing_translations(xml_path="data/portfolio.xml", langs=AVAILABLE_LAN
             if lang not in langs_present:
                 print(f"❌ Bloc {id_} : traduction manquante pour '{lang}'")
 
-# === 8. Main ===
+# === 8. Transformation XSLT (optionnelle) ===
+@app.route('/xml-version')
+def xml_transformed():
+    xml_path = os.path.join('static', 'portfolio.xml')
+    xsl_path = os.path.join('xslt', 'transform.xsl')
+
+    dom = etree.parse(xml_path)
+    xslt = etree.parse(xsl_path)
+    transform = etree.XSLT(xslt)
+    result = transform(dom)
+
+    with open('/tmp/result.html', 'wb') as f:
+        f.write(etree.tostring(result, pretty_print=True, method="html"))
+
+    return send_file('/tmp/result.html', mimetype='text/html')
+
+# === 9. Fonction spéciale pour Vercel ===
+def handler(request):
+    return app(request.environ, start_response=lambda *args: None)
+
+# === 10. Lancement local uniquement ===
 if __name__ == '__main__':
-    test_missing_translations()          # vérifie les traductions
-    generate_static_pages()              # génère automatiquement à chaque lancement
-    app.run(debug=True)                  # lance le serveur local
+    test_missing_translations()
+    generate_static_pages()
+    app.run(debug=True)
