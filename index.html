@@ -57,11 +57,18 @@
       </ul>
 
       <div class="language-selector-nav">
-<a href="?lang=fr" aria-label="Français"><img src="/static/assets/fr.png" alt="FR" width="24"></a>
-<a href="?lang=en" aria-label="English"><img src="/static/assets/en.png" alt="EN" width="24"></a>
-<a href="?lang=ar" aria-label="العربية"><img src="/static/assets/ar.png" alt="AR" width="24"></a>
-<a href="?lang=ja" aria-label="日本語"><img src="/static/assets/ja.png" alt="JA" width="24"></a>
-
+        <a href="?lang=fr" aria-label="Français">
+          <img src="/static/assets/fr.png" alt="FR" width="24">
+        </a>
+        <a href="?lang=en" aria-label="English">
+          <img src="/static/assets/en.png" alt="EN" width="24">
+        </a>
+        <a href="?lang=ar" aria-label="العربية">
+          <img src="/static/assets/ar.png" alt="AR" width="24">
+        </a>
+        <a href="?lang=ja" aria-label="日本語">
+          <img src="/static/assets/ja.png" alt="JA" width="24">
+        </a>
       </div>
 
       <div class="hamburger"><span class="bar"></span><span class="bar"></span><span class="bar"></span></div>
@@ -320,11 +327,10 @@
     });
   });
 
-
 (async function () {
   const availableLangs = ['fr', 'en', 'ar', 'ja'];
   const defaultLang = 'fr';
-  const xmlPath = '/static/portfolio.xml'; 
+  const xmlPath = '/static/portfolio.xml'; // <-- adapte ce chemin si nécessaire
 
   function getLang() {
     const urlParam = new URLSearchParams(window.location.search).get("lang");
@@ -398,6 +404,7 @@
   }
 })();
 </script>
+
 
 </body>
 </html>
